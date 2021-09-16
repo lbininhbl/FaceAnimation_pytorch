@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36AB73626B5FDB95572B7B85 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7309B1D6899331DA10B5CAD /* Pods_FaceAnimation_Pytorch.framework */; };
+		8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */; };
+		8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
+		8454AC9226F2F26400DC0C74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC9126F2F26400DC0C74 /* ViewController.swift */; };
+		8454AC9526F2F26400DC0C74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9326F2F26400DC0C74 /* Main.storyboard */; };
+		8454AC9726F2F26600DC0C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9626F2F26600DC0C74 /* Assets.xcassets */; };
+		8454AC9A26F2F26600DC0C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch.release.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch.release.xcconfig"; sourceTree = "<group>"; };
+		37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch.debug.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch.debug.xcconfig"; sourceTree = "<group>"; };
+		8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnimation_Pytorch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8454AC9126F2F26400DC0C74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8454AC9426F2F26400DC0C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8454AC9626F2F26600DC0C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8454AC9926F2F26600DC0C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8454AC9B26F2F26600DC0C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7309B1D6899331DA10B5CAD /* Pods_FaceAnimation_Pytorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8454AC8726F2F26400DC0C74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36AB73626B5FDB95572B7B85 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B7C5270B177E4DDCD4BFBBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7309B1D6899331DA10B5CAD /* Pods_FaceAnimation_Pytorch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8454AC8126F2F26400DC0C74 = {
+			isa = PBXGroup;
+			children = (
+				8454AC8C26F2F26400DC0C74 /* FaceAnimation_Pytorch */,
+				8454AC8B26F2F26400DC0C74 /* Products */,
+				C276850E207ADD91A5194959 /* Pods */,
+				6B7C5270B177E4DDCD4BFBBE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8454AC8B26F2F26400DC0C74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8454AC8C26F2F26400DC0C74 /* FaceAnimation_Pytorch */ = {
+			isa = PBXGroup;
+			children = (
+				8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */,
+				8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */,
+				8454AC9126F2F26400DC0C74 /* ViewController.swift */,
+				8454AC9326F2F26400DC0C74 /* Main.storyboard */,
+				8454AC9626F2F26600DC0C74 /* Assets.xcassets */,
+				8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */,
+				8454AC9B26F2F26600DC0C74 /* Info.plist */,
+			);
+			path = FaceAnimation_Pytorch;
+			sourceTree = "<group>";
+		};
+		C276850E207ADD91A5194959 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */,
+				21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8454AC8926F2F26400DC0C74 /* FaceAnimation_Pytorch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8454AC9E26F2F26600DC0C74 /* Build configuration list for PBXNativeTarget "FaceAnimation_Pytorch" */;
+			buildPhases = (
+				7B881D43B14B666718B92B37 /* [CP] Check Pods Manifest.lock */,
+				8454AC8626F2F26400DC0C74 /* Sources */,
+				8454AC8726F2F26400DC0C74 /* Frameworks */,
+				8454AC8826F2F26400DC0C74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceAnimation_Pytorch;
+			productName = FaceAnimation_Pytorch;
+			productReference = 8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8454AC8226F2F26400DC0C74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8454AC8926F2F26400DC0C74 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 8454AC8526F2F26400DC0C74 /* Build configuration list for PBXProject "FaceAnimation_Pytorch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8454AC8126F2F26400DC0C74;
+			productRefGroup = 8454AC8B26F2F26400DC0C74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8454AC8926F2F26400DC0C74 /* FaceAnimation_Pytorch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8454AC8826F2F26400DC0C74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8454AC9A26F2F26600DC0C74 /* LaunchScreen.storyboard in Resources */,
+				8454AC9726F2F26600DC0C74 /* Assets.xcassets in Resources */,
+				8454AC9526F2F26400DC0C74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B881D43B14B666718B92B37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAnimation_Pytorch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8454AC8626F2F26400DC0C74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8454AC9226F2F26400DC0C74 /* ViewController.swift in Sources */,
+				8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */,
+				8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8454AC9326F2F26400DC0C74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8454AC9426F2F26400DC0C74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8454AC9926F2F26600DC0C74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8454AC9C26F2F26600DC0C74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8454AC9D26F2F26600DC0C74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8454AC9F26F2F26600DC0C74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaceAnimation_Pytorch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shuye.FaceAnimation-Pytorch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8454ACA026F2F26600DC0C74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaceAnimation_Pytorch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shuye.FaceAnimation-Pytorch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8454AC8526F2F26400DC0C74 /* Build configuration list for PBXProject "FaceAnimation_Pytorch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8454AC9C26F2F26600DC0C74 /* Debug */,
+				8454AC9D26F2F26600DC0C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8454AC9E26F2F26600DC0C74 /* Build configuration list for PBXNativeTarget "FaceAnimation_Pytorch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8454AC9F26F2F26600DC0C74 /* Debug */,
+				8454ACA026F2F26600DC0C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8454AC8226F2F26400DC0C74 /* Project object */;
+}
