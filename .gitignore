@@ -91,3 +91,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 pytorch_model
+infer_pym.py

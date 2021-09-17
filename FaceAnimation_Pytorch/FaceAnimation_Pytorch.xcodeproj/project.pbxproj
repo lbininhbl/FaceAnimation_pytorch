@@ -10,10 +10,24 @@
 		36AB73626B5FDB95572B7B85 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7309B1D6899331DA10B5CAD /* Pods_FaceAnimation_Pytorch.framework */; };
 		8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */; };
 		8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
-		8454AC9226F2F26400DC0C74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC9126F2F26400DC0C74 /* ViewController.swift */; };
+		8454AC9226F2F26400DC0C74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC9126F2F26400DC0C74 /* MainViewController.swift */; };
 		8454AC9526F2F26400DC0C74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9326F2F26400DC0C74 /* Main.storyboard */; };
 		8454AC9726F2F26600DC0C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9626F2F26600DC0C74 /* Assets.xcassets */; };
 		8454AC9A26F2F26600DC0C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */; };
+		8454ACAB26F2F53B00DC0C74 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACAA26F2F53B00DC0C74 /* TorchModule.mm */; };
+		8454ACB326F2F90200DC0C74 /* myh-389-fps15.json in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACAD26F2F90100DC0C74 /* myh-389-fps15.json */; };
+		8454ACB426F2F90200DC0C74 /* male_std.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACAF26F2F90200DC0C74 /* male_std.jpg */; };
+		8454ACB926F31ADB00DC0C74 /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACB726F31ADB00DC0C74 /* generator.ptl */; };
+		8454ACBA26F31ADB00DC0C74 /* kp_detector.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACB826F31ADB00DC0C74 /* kp_detector.ptl */; };
+		8454ACC426F31CFA00DC0C74 /* Compareable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACBE26F31CFA00DC0C74 /* Compareable+Extension.swift */; };
+		8454ACC526F31CFA00DC0C74 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACBF26F31CFA00DC0C74 /* String+Extension.swift */; };
+		8454ACC626F31CFA00DC0C74 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC026F31CFA00DC0C74 /* CVPixelBufferExtension.swift */; };
+		8454ACC726F31CFA00DC0C74 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC126F31CFA00DC0C74 /* UIImageExtension.swift */; };
+		8454ACC826F31CFA00DC0C74 /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC226F31CFA00DC0C74 /* CGImage+Extension.swift */; };
+		8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */; };
+		8454ACCB26F322EE00DC0C74 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */; };
+		8454ACD026F32BA600DC0C74 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */; };
+		84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E4F26F3408300CCBA8E /* FileUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +36,28 @@
 		8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnimation_Pytorch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8454AC9126F2F26400DC0C74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8454AC9126F2F26400DC0C74 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8454AC9426F2F26400DC0C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8454AC9626F2F26600DC0C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8454AC9926F2F26600DC0C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8454AC9B26F2F26600DC0C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8454ACA826F2F53A00DC0C74 /* FaceAnimation_Pytorch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceAnimation_Pytorch-Bridging-Header.h"; sourceTree = "<group>"; };
+		8454ACA926F2F53B00DC0C74 /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
+		8454ACAA26F2F53B00DC0C74 /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		8454ACAD26F2F90100DC0C74 /* myh-389-fps15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "myh-389-fps15.json"; sourceTree = "<group>"; };
+		8454ACAF26F2F90200DC0C74 /* male_std.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = male_std.jpg; sourceTree = "<group>"; };
+		8454ACB726F31ADB00DC0C74 /* generator.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.ptl; sourceTree = "<group>"; };
+		8454ACB826F31ADB00DC0C74 /* kp_detector.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = kp_detector.ptl; sourceTree = "<group>"; };
+		8454ACBB26F31C5E00DC0C74 /* infer_pym.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = infer_pym.py; sourceTree = "<group>"; };
+		8454ACBE26F31CFA00DC0C74 /* Compareable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Compareable+Extension.swift"; sourceTree = "<group>"; };
+		8454ACBF26F31CFA00DC0C74 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8454ACC026F31CFA00DC0C74 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		8454ACC126F31CFA00DC0C74 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		8454ACC226F31CFA00DC0C74 /* CGImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Extension.swift"; sourceTree = "<group>"; };
+		8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		84E49E4F26F3408300CCBA8E /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		B7309B1D6899331DA10B5CAD /* Pods_FaceAnimation_Pytorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,6 +84,8 @@
 		8454AC8126F2F26400DC0C74 = {
 			isa = PBXGroup;
 			children = (
+				8454ACA826F2F53A00DC0C74 /* FaceAnimation_Pytorch-Bridging-Header.h */,
+				8454ACBB26F31C5E00DC0C74 /* infer_pym.py */,
 				8454AC8C26F2F26400DC0C74 /* FaceAnimation_Pytorch */,
 				8454AC8B26F2F26400DC0C74 /* Products */,
 				C276850E207ADD91A5194959 /* Pods */,
@@ -71,15 +104,126 @@
 		8454AC8C26F2F26400DC0C74 /* FaceAnimation_Pytorch */ = {
 			isa = PBXGroup;
 			children = (
+				8454ACA126F2F31000DC0C74 /* AppDelegate */,
+				8454ACA226F2F33500DC0C74 /* Module */,
+				8454ACBD26F31CFA00DC0C74 /* Extension */,
+				84E49E4E26F3407100CCBA8E /* Utils */,
+				8454ACCE26F32B8C00DC0C74 /* Global */,
+				8454ACA526F2F39400DC0C74 /* Resource */,
+			);
+			path = FaceAnimation_Pytorch;
+			sourceTree = "<group>";
+		};
+		8454ACA126F2F31000DC0C74 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
 				8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */,
 				8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */,
-				8454AC9126F2F26400DC0C74 /* ViewController.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8454ACA226F2F33500DC0C74 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACA326F2F34D00DC0C74 /* MainView */,
+				8454ACA726F2F50C00DC0C74 /* Torch */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8454ACA326F2F34D00DC0C74 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */,
+				8454AC9126F2F26400DC0C74 /* MainViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		8454ACA526F2F39400DC0C74 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACA626F2F3F900DC0C74 /* pytorch_model */,
 				8454AC9326F2F26400DC0C74 /* Main.storyboard */,
 				8454AC9626F2F26600DC0C74 /* Assets.xcassets */,
 				8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */,
 				8454AC9B26F2F26600DC0C74 /* Info.plist */,
 			);
-			path = FaceAnimation_Pytorch;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8454ACA626F2F3F900DC0C74 /* pytorch_model */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACB026F2F90200DC0C74 /* mobile_models */,
+				8454ACAC26F2F90100DC0C74 /* support_materials */,
+				8454ACAE26F2F90200DC0C74 /* test_images */,
+			);
+			path = pytorch_model;
+			sourceTree = "<group>";
+		};
+		8454ACA726F2F50C00DC0C74 /* Torch */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACA926F2F53B00DC0C74 /* TorchModule.h */,
+				8454ACAA26F2F53B00DC0C74 /* TorchModule.mm */,
+			);
+			path = Torch;
+			sourceTree = "<group>";
+		};
+		8454ACAC26F2F90100DC0C74 /* support_materials */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACAD26F2F90100DC0C74 /* myh-389-fps15.json */,
+			);
+			path = support_materials;
+			sourceTree = "<group>";
+		};
+		8454ACAE26F2F90200DC0C74 /* test_images */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACAF26F2F90200DC0C74 /* male_std.jpg */,
+			);
+			path = test_images;
+			sourceTree = "<group>";
+		};
+		8454ACB026F2F90200DC0C74 /* mobile_models */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACB726F31ADB00DC0C74 /* generator.ptl */,
+				8454ACB826F31ADB00DC0C74 /* kp_detector.ptl */,
+			);
+			path = mobile_models;
+			sourceTree = "<group>";
+		};
+		8454ACBD26F31CFA00DC0C74 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACBE26F31CFA00DC0C74 /* Compareable+Extension.swift */,
+				8454ACBF26F31CFA00DC0C74 /* String+Extension.swift */,
+				8454ACC026F31CFA00DC0C74 /* CVPixelBufferExtension.swift */,
+				8454ACC126F31CFA00DC0C74 /* UIImageExtension.swift */,
+				8454ACC226F31CFA00DC0C74 /* CGImage+Extension.swift */,
+				8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8454ACCE26F32B8C00DC0C74 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		84E49E4E26F3407100CCBA8E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84E49E4F26F3408300CCBA8E /* FileUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C276850E207ADD91A5194959 /* Pods */ = {
@@ -88,7 +232,6 @@
 				37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */,
 				21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,6 +267,7 @@
 				TargetAttributes = {
 					8454AC8926F2F26400DC0C74 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -151,6 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8454AC9A26F2F26600DC0C74 /* LaunchScreen.storyboard in Resources */,
+				8454ACB326F2F90200DC0C74 /* myh-389-fps15.json in Resources */,
+				8454ACB926F31ADB00DC0C74 /* generator.ptl in Resources */,
+				8454ACBA26F31ADB00DC0C74 /* kp_detector.ptl in Resources */,
+				8454ACB426F2F90200DC0C74 /* male_std.jpg in Resources */,
 				8454AC9726F2F26600DC0C74 /* Assets.xcassets in Resources */,
 				8454AC9526F2F26400DC0C74 /* Main.storyboard in Resources */,
 			);
@@ -188,9 +336,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8454AC9226F2F26400DC0C74 /* ViewController.swift in Sources */,
+				8454ACCB26F322EE00DC0C74 /* MainTableViewCell.swift in Sources */,
+				8454AC9226F2F26400DC0C74 /* MainViewController.swift in Sources */,
+				8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */,
+				8454ACC626F31CFA00DC0C74 /* CVPixelBufferExtension.swift in Sources */,
+				8454ACD026F32BA600DC0C74 /* GlobalFunc.swift in Sources */,
 				8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */,
+				8454ACC426F31CFA00DC0C74 /* Compareable+Extension.swift in Sources */,
+				8454ACAB26F2F53B00DC0C74 /* TorchModule.mm in Sources */,
+				8454ACC826F31CFA00DC0C74 /* CGImage+Extension.swift in Sources */,
+				84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */,
+				8454ACC526F31CFA00DC0C74 /* String+Extension.swift in Sources */,
 				8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */,
+				8454ACC726F31CFA00DC0C74 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,15 +496,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FaceAnimation_Pytorch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				INFOPLIST_FILE = FaceAnimation_Pytorch/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuye.FaceAnimation-Pytorch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceAnimation_Pytorch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,15 +519,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FaceAnimation_Pytorch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				INFOPLIST_FILE = FaceAnimation_Pytorch/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuye.FaceAnimation-Pytorch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceAnimation_Pytorch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

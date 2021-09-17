@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FaceAnimation_Pytorch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRC-YI-znc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="379"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="379" id="O51-yh-aoH"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="输出台:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeS-FN-thq">
+                                <rect key="frame" x="0.0" y="423" width="414" height="154"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.95686274510000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="Q4m-61-FPn"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIx-Hx-fd8">
+                                <rect key="frame" x="0.0" y="577" width="414" height="285"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="xLN-kD-raq" customClass="MainTableViewCell" customModule="FaceAnimation_Pytorch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLN-kD-raq" id="8hy-c4-kWr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-Io-8YJ">
+                                                    <rect key="frame" x="15" y="10" width="399" height="30"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cFe-Io-8YJ" secondAttribute="trailing" id="S4j-BJ-A84"/>
+                                                <constraint firstItem="cFe-Io-8YJ" firstAttribute="top" secondItem="8hy-c4-kWr" secondAttribute="top" constant="10" id="WtP-Ot-R2Z"/>
+                                                <constraint firstAttribute="bottom" secondItem="cFe-Io-8YJ" secondAttribute="bottom" constant="10" id="fLa-Lk-jxM"/>
+                                                <constraint firstItem="cFe-Io-8YJ" firstAttribute="leading" secondItem="8hy-c4-kWr" secondAttribute="leading" constant="15" id="hve-kD-aqS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="cFe-Io-8YJ" id="Nkr-yu-01f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9CV-KB-JWH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wun-NX-vkf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PIx-Hx-fd8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0iq-Dk-gVL"/>
+                            <constraint firstItem="PIx-Hx-fd8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4rk-kZ-28z"/>
+                            <constraint firstItem="NeS-FN-thq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lba-bC-Uc0"/>
+                            <constraint firstItem="NRC-YI-znc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OC1-9c-EeW"/>
+                            <constraint firstItem="NeS-FN-thq" firstAttribute="top" secondItem="NRC-YI-znc" secondAttribute="bottom" id="TbM-zV-dn6"/>
+                            <constraint firstItem="NRC-YI-znc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VHR-zi-yZF"/>
+                            <constraint firstItem="NRC-YI-znc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ybd-Tq-ByT"/>
+                            <constraint firstItem="PIx-Hx-fd8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o9X-l8-Spa"/>
+                            <constraint firstItem="PIx-Hx-fd8" firstAttribute="top" secondItem="NeS-FN-thq" secondAttribute="bottom" id="uUa-aA-e72"/>
+                            <constraint firstItem="NeS-FN-thq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xxB-cN-VVR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="NRC-YI-znc" id="gZk-hW-3zk"/>
+                        <outlet property="tableView" destination="PIx-Hx-fd8" id="qdF-rA-A95"/>
+                        <outlet property="textView" destination="NeS-FN-thq" id="kIP-ey-8oX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
