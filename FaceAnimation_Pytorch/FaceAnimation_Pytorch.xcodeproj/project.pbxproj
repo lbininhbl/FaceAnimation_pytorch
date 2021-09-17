@@ -48,7 +48,6 @@
 		8454ACAF26F2F90200DC0C74 /* male_std.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = male_std.jpg; sourceTree = "<group>"; };
 		8454ACB726F31ADB00DC0C74 /* generator.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.ptl; sourceTree = "<group>"; };
 		8454ACB826F31ADB00DC0C74 /* kp_detector.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = kp_detector.ptl; sourceTree = "<group>"; };
-		8454ACBB26F31C5E00DC0C74 /* infer_pym.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = infer_pym.py; sourceTree = "<group>"; };
 		8454ACBE26F31CFA00DC0C74 /* Compareable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Compareable+Extension.swift"; sourceTree = "<group>"; };
 		8454ACBF26F31CFA00DC0C74 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8454ACC026F31CFA00DC0C74 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				8454ACA826F2F53A00DC0C74 /* FaceAnimation_Pytorch-Bridging-Header.h */,
-				8454ACBB26F31C5E00DC0C74 /* infer_pym.py */,
 				8454AC8C26F2F26400DC0C74 /* FaceAnimation_Pytorch */,
 				8454AC8B26F2F26400DC0C74 /* Products */,
 				C276850E207ADD91A5194959 /* Pods */,
