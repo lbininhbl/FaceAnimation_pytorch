@@ -7,4 +7,19 @@ target 'FaceAnimation_Pytorch' do
 
   # Pods for FaceAnimation_Pytorch
   pod 'LibTorch-Lite', '~>1.9.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+  pod 'RxDataSources'
+  
+  
+end
+
+target 'FaceAnimation_Pytorch_GPU' do
+  use_frameworks!
+  pod 'LibTorch-Lite-Nightly'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+  pod 'RxDataSources'
 end

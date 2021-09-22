@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)runKpDetect:(void *)imageBuffer with:(int)width height:(int)height completion:(void(^)(NSArray<NSNumber *> *values, NSArray<NSNumber *> *jacobans))completion;
 
-- (void)runGenerator:(void *)imageBuffer with:(int)width height:(int)height kp_driving:(NSDictionary *)drivingDict kp_source:(NSDictionary *)sourceDict;
+- (NSArray<NSNumber *> *)runGenerator:(void *)imageBuffer with:(int)width height:(int)height kp_driving:(NSDictionary *)drivingDict kp_source:(NSDictionary *)sourceDict;
 
 @end
 

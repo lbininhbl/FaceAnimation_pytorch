@@ -71,7 +71,7 @@ using namespace std;
     completion(values.copy, jacobians.copy);
 }
 
-- (void)runGenerator:(void *)imageBuffer with:(int)width height:(int)height kp_driving:(nonnull NSDictionary *)drivingDict kp_source:(nonnull NSDictionary *)sourceDict {
+- (NSArray<NSNumber *> *)runGenerator:(void *)imageBuffer with:(int)width height:(int)height kp_driving:(nonnull NSDictionary *)drivingDict kp_source:(nonnull NSDictionary *)sourceDict {
     
     #pragma mark - 将 kp_driving 和 kp_source 都转成 torch::IValue, 具体是字典形式
     
@@ -132,12 +132,42 @@ using namespace std;
     torch::IValue driving(kp_driving);
     torch::IValue source(kp_source);
     
+    /// 图片数据
+    at::Tensor image = torch::from_blob(imageBuffer, {1, 3, width, height}, at::kFloat).metal();
     
-    at::Tensor image = torch::from_blob(imageBuffer, {1, 3, width, height}, at::kFloat);
+    CFAbsoluteTime begin = CFAbsoluteTimeGetCurrent();
     
-    auto outputDict = _model.forward({ image, driving, source });
+    /// 调用模型
+    auto outputDict = _model.forward({ image, driving, source }).toGenericDict();
     
-    NSLog(@"");
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    
+    NSLog(@"调用一次generator所花的时间:%2fs", end - begin);
+    
+    auto prediction = outputDict.at("prediction").toTensor().cpu();
+    
+    float *valueBuffer = prediction.data_ptr<float>();
+    
+    
+    int64_t dim = prediction.dim();
+    
+    int valueCount = 1;
+    for (int i = 0; i < dim; i++) {
+        int64_t size = prediction.size(i);
+        valueCount *= size;
+    }
+    
+    NSMutableArray* values = [NSMutableArray array];
+    for (int i = 0; i < valueCount; i++) {
+        [values addObject:@(valueBuffer[i])];
+    }
+    
+    free(val);
+    free(jac);
+    free(source_val);
+    free(source_jac);
+    
+    return values.copy;
 }
 
 @end

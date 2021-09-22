@@ -59,10 +59,6 @@ class MainViewController: UIViewController {
 // MARK: - Pytorch
 extension MainViewController {
     private func execute() {
-//        guard let buffer = testImage.pixelBuffer(), var resizeBuffer = buffer.resize(to: CGSize(width: 256, height: 256)) else {
-//            self.logInfo("加载图片失败")
-//            return
-//        }
         
         let resizedImage = testImage.resized(to: CGSize(width: 256, height: 256))
         guard var pixelBuffer = resizedImage.normalized(type: .zero_to_one) else {
@@ -81,29 +77,15 @@ extension MainViewController {
             value = values.map { $0.floatValue }
             jacobian = jacobians.map { $0.floatValue }
         }
-    
-//        predictions = []
-//        for kp_driving_flat in tqdm(driving_motion_kp):
-//
-//            # reshape kp['value]: (10,2) -> (1,10,2)
-//            val = np.array(kp_driving_flat['value'], dtype=np.float32)
-//            val = torch.tensor(val[np.newaxis].astype(np.float32))
-//
-//            # reshape kp['value]: (1,10,2,2) -> (1,10,2,2)
-//            jac = np.array(kp_driving_flat['jacobian'], dtype=np.float32)
-//            jac = torch.tensor(jac[np.newaxis].astype(np.float32))
-//
-//            # make prediction for each frame
-//            kp_driving = {'value':val, 'jacobian':jac}
-//            res = generator(img, kp_driving, kp_source)
-//            predictions.append(res['prediction']) # res['prediction'].shape = (1,3,256,256)
-//        print("make animation ... finished.")
             
+        var predictions = [[NSNumber]]()
+        
+        TimeUtil.begin("generator")
         autoreleasepool {
             let count = driving_motion_kps.count
             for (index, kp_driving) in driving_motion_kps.enumerated() {
                 autoreleasepool {
-                    let text = String(format: "生成人脸图像帧,进度:%.2f%%", (Float(index) / Float(count)) * 100.0)
+                    let text = String(format: "generator,进度:%.2f%%", (Float(index) / Float(count)) * 100.0)
                     print(text)
                     
                     let jac_arr = (kp_driving["jacobian"] as! [[[NSNumber]]]).map { $0.map { $0.map { $0.floatValue } } }
@@ -111,14 +93,13 @@ extension MainViewController {
                     let val_arr = (kp_driving["value"] as! [[NSNumber]]).map { $0.map { $0.floatValue } }
                     let val = val_arr.flatMap { $0 }
                     
-                    generator.runGenerator(pointer, with: w, height: h, kp_driving: ["value": value, "jacobian": jacobian], kp_source: ["value": val, "jacobian": jac])                    
+                    let predict = generator.runGenerator(pointer, with: w, height: h, kp_driving: ["value": value, "jacobian": jacobian], kp_source: ["value": val, "jacobian": jac])
+                    predictions.append(predict)
                 }
             }
         }
+        TimeUtil.end("generator", log: "generator所花时间")
         
-        
-        
-        free(pointer)
     }
 }
 
