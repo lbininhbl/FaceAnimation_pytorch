@@ -30,9 +30,10 @@ using namespace std;
 
 - (void)runKpDetect:(void *)imageBuffer with:(int)width height:(int)height completion:(void(^)(NSArray<NSNumber *> *values, NSArray<NSNumber *> *jacobans))completion {
     
-    at::Tensor tensor = torch::from_blob(imageBuffer, {1, 3, width, height}, at::kFloat);
+    at::Tensor tensor = torch::from_blob(imageBuffer, {1, 3, width, height}, at::kFloat).metal();
+//    at::Tensor tensor = torch::from_blob(imageBuffer, {1, 3, width, height}, at::kFloat);
     
-//    auto test = _model.forward({ tensor });
+//    auto test = _model.forward({ tensor }).toTensor().cpu();
 //    cout << test << endl;
     
     auto outputDict = _model.forward({ tensor }).toGenericDict();

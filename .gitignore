@@ -92,4 +92,5 @@ iOSInjectionProject/
 
 .DS_Store
 pytorch_model
+coreml_model
 infer_pym.py

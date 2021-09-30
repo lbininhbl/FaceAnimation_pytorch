@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36AB73626B5FDB95572B7B85 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7309B1D6899331DA10B5CAD /* Pods_FaceAnimation_Pytorch.framework */; };
+		36AB73626B5FDB95572B7B85 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		3CA7843EEBDD1B85E23962D0 /* Pods_FaceAnimation_Pytorch_GPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D93719EE4B0EA66B4159FF9 /* Pods_FaceAnimation_Pytorch_GPU.framework */; };
 		8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */; };
 		8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
@@ -27,6 +27,58 @@
 		8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */; };
 		8454ACCB26F322EE00DC0C74 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */; };
 		8454ACD026F32BA600DC0C74 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */; };
+		846BB58A26FC60A00040DEFA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58926FC60A00040DEFA /* BaseCoordinator.swift */; };
+		846BB58C26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
+		846BB58D26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
+		846BB58E26FC6CB50040DEFA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58926FC60A00040DEFA /* BaseCoordinator.swift */; };
+		846BB59026FC6DB00040DEFA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */; };
+		846BB59126FC6DB00040DEFA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */; };
+		846BB59326FC6F6D0040DEFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB59226FC6F6D0040DEFA /* MainCoordinator.swift */; };
+		846BB59426FC6F6D0040DEFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB59226FC6F6D0040DEFA /* MainCoordinator.swift */; };
+		846BB59726FC883D0040DEFA /* kkk-kp_detector.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59626FC883D0040DEFA /* kkk-kp_detector.ptl */; };
+		846BB59826FC883D0040DEFA /* kkk-kp_detector.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59626FC883D0040DEFA /* kkk-kp_detector.ptl */; };
+		846BB59A26FC88450040DEFA /* kkk-generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59926FC88450040DEFA /* kkk-generator.ptl */; };
+		846BB59B26FC88450040DEFA /* kkk-generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59926FC88450040DEFA /* kkk-generator.ptl */; };
+		846BB59E26FC9E210040DEFA /* FaceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB59D26FC9E210040DEFA /* FaceAnimation.swift */; };
+		846BB59F26FC9E210040DEFA /* FaceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB59D26FC9E210040DEFA /* FaceAnimation.swift */; };
+		846BB5AB27006BA70040DEFA /* CPU-generator-SSLW1.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB5AA27006BA70040DEFA /* CPU-generator-SSLW1.ptl */; };
+		846BB5AC27006BA70040DEFA /* CPU-generator-SSLW1.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB5AA27006BA70040DEFA /* CPU-generator-SSLW1.ptl */; };
+		846BB65F270461B00040DEFA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */; };
+		846BB660270461B00040DEFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC9126F2F26400DC0C74 /* MainViewController.swift */; };
+		846BB661270461B00040DEFA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */; };
+		846BB662270461B00040DEFA /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC026F31CFA00DC0C74 /* CVPixelBufferExtension.swift */; };
+		846BB663270461B00040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
+		846BB664270461B00040DEFA /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */; };
+		846BB665270461B00040DEFA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */; };
+		846BB666270461B00040DEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */; };
+		846BB667270461B00040DEFA /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5A26FB03D200CCBA8E /* TimeUtils.swift */; };
+		846BB668270461B00040DEFA /* Compareable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACBE26F31CFA00DC0C74 /* Compareable+Extension.swift */; };
+		846BB669270461B00040DEFA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */; };
+		846BB66A270461B00040DEFA /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACAA26F2F53B00DC0C74 /* TorchModule.mm */; };
+		846BB66B270461B00040DEFA /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC226F31CFA00DC0C74 /* CGImage+Extension.swift */; };
+		846BB66C270461B00040DEFA /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E4F26F3408300CCBA8E /* FileUtils.swift */; };
+		846BB66D270461B00040DEFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB59226FC6F6D0040DEFA /* MainCoordinator.swift */; };
+		846BB66E270461B00040DEFA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACBF26F31CFA00DC0C74 /* String+Extension.swift */; };
+		846BB66F270461B00040DEFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
+		846BB671270461B00040DEFA /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC126F31CFA00DC0C74 /* UIImageExtension.swift */; };
+		846BB672270461B00040DEFA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58926FC60A00040DEFA /* BaseCoordinator.swift */; };
+		846BB674270461B00040DEFA /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		846BB675270461B00040DEFA /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */; };
+		846BB677270461B00040DEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */; };
+		846BB678270461B00040DEFA /* CPU-generator-SSLW1.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB5AA27006BA70040DEFA /* CPU-generator-SSLW1.ptl */; };
+		846BB679270461B00040DEFA /* myh-389-fps15.json in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACAD26F2F90100DC0C74 /* myh-389-fps15.json */; };
+		846BB67A270461B00040DEFA /* kkk-generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59926FC88450040DEFA /* kkk-generator.ptl */; };
+		846BB67B270461B00040DEFA /* CPU-generator-SLW.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E8426FB1E2300CCBA8E /* CPU-generator-SLW.ptl */; };
+		846BB67C270461B00040DEFA /* kp_detector.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACB826F31ADB00DC0C74 /* kp_detector.ptl */; };
+		846BB67D270461B00040DEFA /* male_std.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACAF26F2F90200DC0C74 /* male_std.jpg */; };
+		846BB67E270461B00040DEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9626F2F26600DC0C74 /* Assets.xcassets */; };
+		846BB67F270461B00040DEFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9326F2F26400DC0C74 /* Main.storyboard */; };
+		846BB680270461B00040DEFA /* kkk-kp_detector.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59626FC883D0040DEFA /* kkk-kp_detector.ptl */; };
+		846BB681270461B00040DEFA /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
+		846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */; };
+		846BB68D270462380040DEFA /* kpdetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 846BB68C270462380040DEFA /* kpdetector.mlmodel */; };
+		846BB692270465420040DEFA /* CMModelTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB691270465420040DEFA /* CMModelTool.swift */; };
+		846BB69427055DFB0040DEFA /* generator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 846BB68E270462400040DEFA /* generator.mlmodel */; };
 		84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E4F26F3408300CCBA8E /* FileUtils.swift */; };
 		84E49E5726F48D5C00CCBA8E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */; };
 		84E49E5926FADB2200CCBA8E /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
@@ -53,6 +105,9 @@
 		84E49E7626FB07E100CCBA8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9326F2F26400DC0C74 /* Main.storyboard */; };
 		84E49E7726FB07E100CCBA8E /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
 		84E49E8326FB0D6900CCBA8E /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E8126FB0D6400CCBA8E /* TorchModule.mm */; };
+		84E49E8526FB1E2300CCBA8E /* CPU-generator-SLW.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E8426FB1E2300CCBA8E /* CPU-generator-SLW.ptl */; };
+		84E49E8626FB1E2300CCBA8E /* CPU-generator-SLW.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E8426FB1E2300CCBA8E /* CPU-generator-SLW.ptl */; };
+		8DBF5AF8287648EC222BD997 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +137,20 @@
 		8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		846BB58926FC60A00040DEFA /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		846BB59226FC6F6D0040DEFA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		846BB59626FC883D0040DEFA /* kkk-kp_detector.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kkk-kp_detector.ptl"; sourceTree = "<group>"; };
+		846BB59926FC88450040DEFA /* kkk-generator.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kkk-generator.ptl"; sourceTree = "<group>"; };
+		846BB59D26FC9E210040DEFA /* FaceAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAnimation.swift; sourceTree = "<group>"; };
+		846BB5AA27006BA70040DEFA /* CPU-generator-SSLW1.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CPU-generator-SSLW1.ptl"; sourceTree = "<group>"; };
+		846BB686270461B00040DEFA /* FaceAnimation_Pytorch_CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnimation_Pytorch_CoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		846BB687270461B10040DEFA /* FaceAnimation_Pytorch copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FaceAnimation_Pytorch copy2-Info.plist"; path = "/Users/admin/Desktop/workflow/ThirdPart-SourceCode/FaceAnimation_pytorch/FaceAnimation_Pytorch/FaceAnimation_Pytorch copy2-Info.plist"; sourceTree = "<absolute>"; };
+		846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAnimationCoreML.swift; sourceTree = "<group>"; };
+		846BB68C270462380040DEFA /* kpdetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = kpdetector.mlmodel; sourceTree = "<group>"; };
+		846BB68E270462400040DEFA /* generator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = generator.mlmodel; sourceTree = "<group>"; };
+		846BB691270465420040DEFA /* CMModelTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMModelTool.swift; sourceTree = "<group>"; };
 		84E49E4F26F3408300CCBA8E /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		84E49E5826FADB2200CCBA8E /* generator.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.ptl; sourceTree = "<group>"; };
@@ -90,7 +159,9 @@
 		84E49E7D26FB07E200CCBA8E /* FaceAnimation_Pytorch copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FaceAnimation_Pytorch copy-Info.plist"; path = "/Users/admin/Desktop/workflow/ThirdPart-SourceCode/FaceAnimation_pytorch/FaceAnimation_Pytorch/FaceAnimation_Pytorch copy-Info.plist"; sourceTree = "<absolute>"; };
 		84E49E8026FB0D6400CCBA8E /* TorchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		84E49E8126FB0D6400CCBA8E /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		84E49E8426FB1E2300CCBA8E /* CPU-generator-SLW.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CPU-generator-SLW.ptl"; sourceTree = "<group>"; };
 		8D93719EE4B0EA66B4159FF9 /* Pods_FaceAnimation_Pytorch_GPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch_GPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +169,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36AB73626B5FDB95572B7B85 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
+				36AB73626B5FDB95572B7B85 /* (null) in Frameworks */,
+				8DBF5AF8287648EC222BD997 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846BB673270461B00040DEFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846BB674270461B00040DEFA /* (null) in Frameworks */,
+				846BB675270461B00040DEFA /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8D93719EE4B0EA66B4159FF9 /* Pods_FaceAnimation_Pytorch_GPU.framework */,
+				D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,6 +212,7 @@
 				C276850E207ADD91A5194959 /* Pods */,
 				6B7C5270B177E4DDCD4BFBBE /* Frameworks */,
 				84E49E7D26FB07E200CCBA8E /* FaceAnimation_Pytorch copy-Info.plist */,
+				846BB687270461B10040DEFA /* FaceAnimation_Pytorch copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +221,7 @@
 			children = (
 				8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */,
 				84E49E7C26FB07E100CCBA8E /* FaceAnimation_Pytorch_GPU.app */,
+				846BB686270461B00040DEFA /* FaceAnimation_Pytorch_CoreML.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +231,7 @@
 			children = (
 				8454ACA126F2F31000DC0C74 /* AppDelegate */,
 				8454ACA226F2F33500DC0C74 /* Module */,
+				846BB58826FC60880040DEFA /* BaseCoordinator */,
 				8454ACBD26F31CFA00DC0C74 /* Extension */,
 				84E49E4E26F3407100CCBA8E /* Utils */,
 				8454ACCE26F32B8C00DC0C74 /* Global */,
@@ -160,6 +245,7 @@
 			children = (
 				8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */,
 				8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */,
+				846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -167,6 +253,7 @@
 		8454ACA226F2F33500DC0C74 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				846BB59C26FC9E080040DEFA /* Service */,
 				8454ACA326F2F34D00DC0C74 /* MainView */,
 				8454ACA726F2F50C00DC0C74 /* Torch */,
 			);
@@ -176,9 +263,9 @@
 		8454ACA326F2F34D00DC0C74 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */,
-				8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */,
-				8454AC9126F2F26400DC0C74 /* MainViewController.swift */,
+				846BB659270460BF0040DEFA /* Coordinator */,
+				846BB65A270460D10040DEFA /* ViewModel */,
+				846BB65B270460E00040DEFA /* View */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -186,6 +273,7 @@
 		8454ACA526F2F39400DC0C74 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				846BB68A270462190040DEFA /* coreml_model */,
 				8454ACA626F2F3F900DC0C74 /* pytorch_model */,
 				8454AC9326F2F26400DC0C74 /* Main.storyboard */,
 				8454AC9626F2F26600DC0C74 /* Assets.xcassets */,
@@ -233,8 +321,12 @@
 		8454ACB026F2F90200DC0C74 /* mobile_models */ = {
 			isa = PBXGroup;
 			children = (
+				84E49E8426FB1E2300CCBA8E /* CPU-generator-SLW.ptl */,
+				846BB5AA27006BA70040DEFA /* CPU-generator-SSLW1.ptl */,
 				84E49E5826FADB2200CCBA8E /* generator.ptl */,
 				8454ACB826F31ADB00DC0C74 /* kp_detector.ptl */,
+				846BB59626FC883D0040DEFA /* kkk-kp_detector.ptl */,
+				846BB59926FC88450040DEFA /* kkk-generator.ptl */,
 			);
 			path = mobile_models;
 			sourceTree = "<group>";
@@ -248,6 +340,7 @@
 				8454ACC126F31CFA00DC0C74 /* UIImageExtension.swift */,
 				8454ACC226F31CFA00DC0C74 /* CGImage+Extension.swift */,
 				8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */,
+				846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -260,11 +353,71 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		846BB58826FC60880040DEFA /* BaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				846BB58926FC60A00040DEFA /* BaseCoordinator.swift */,
+			);
+			path = BaseCoordinator;
+			sourceTree = "<group>";
+		};
+		846BB59C26FC9E080040DEFA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				846BB59D26FC9E210040DEFA /* FaceAnimation.swift */,
+				846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		846BB659270460BF0040DEFA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				846BB59226FC6F6D0040DEFA /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		846BB65A270460D10040DEFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		846BB65B270460E00040DEFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */,
+				8454AC9126F2F26400DC0C74 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846BB68A270462190040DEFA /* coreml_model */ = {
+			isa = PBXGroup;
+			children = (
+				846BB68B2704622A0040DEFA /* models */,
+			);
+			path = coreml_model;
+			sourceTree = "<group>";
+		};
+		846BB68B2704622A0040DEFA /* models */ = {
+			isa = PBXGroup;
+			children = (
+				846BB68C270462380040DEFA /* kpdetector.mlmodel */,
+				846BB68E270462400040DEFA /* generator.mlmodel */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		84E49E4E26F3407100CCBA8E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				84E49E4F26F3408300CCBA8E /* FileUtils.swift */,
 				84E49E5A26FB03D200CCBA8E /* TimeUtils.swift */,
+				846BB691270465420040DEFA /* CMModelTool.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,6 +473,25 @@
 			productReference = 8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		846BB65C270461B00040DEFA /* FaceAnimation_Pytorch_CoreML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846BB683270461B00040DEFA /* Build configuration list for PBXNativeTarget "FaceAnimation_Pytorch_CoreML" */;
+			buildPhases = (
+				846BB65D270461B00040DEFA /* [CP] Check Pods Manifest.lock */,
+				846BB65E270461B00040DEFA /* Sources */,
+				846BB673270461B00040DEFA /* Frameworks */,
+				846BB676270461B00040DEFA /* Resources */,
+				846BB682270461B00040DEFA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceAnimation_Pytorch_CoreML;
+			productName = FaceAnimation_Pytorch;
+			productReference = 846BB686270461B00040DEFA /* FaceAnimation_Pytorch_CoreML.app */;
+			productType = "com.apple.product-type.application";
+		};
 		84E49E5C26FB07E100CCBA8E /* FaceAnimation_Pytorch_GPU */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84E49E7926FB07E100CCBA8E /* Build configuration list for PBXNativeTarget "FaceAnimation_Pytorch_GPU" */;
@@ -369,6 +541,7 @@
 			targets = (
 				8454AC8926F2F26400DC0C74 /* FaceAnimation_Pytorch */,
 				84E49E5C26FB07E100CCBA8E /* FaceAnimation_Pytorch_GPU */,
+				846BB65C270461B00040DEFA /* FaceAnimation_Pytorch_CoreML */,
 			);
 		};
 /* End PBXProject section */
@@ -379,12 +552,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				8454AC9A26F2F26600DC0C74 /* LaunchScreen.storyboard in Resources */,
+				846BB5AB27006BA70040DEFA /* CPU-generator-SSLW1.ptl in Resources */,
 				8454ACB326F2F90200DC0C74 /* myh-389-fps15.json in Resources */,
+				846BB59A26FC88450040DEFA /* kkk-generator.ptl in Resources */,
+				84E49E8526FB1E2300CCBA8E /* CPU-generator-SLW.ptl in Resources */,
 				8454ACBA26F31ADB00DC0C74 /* kp_detector.ptl in Resources */,
 				8454ACB426F2F90200DC0C74 /* male_std.jpg in Resources */,
 				8454AC9726F2F26600DC0C74 /* Assets.xcassets in Resources */,
 				8454AC9526F2F26400DC0C74 /* Main.storyboard in Resources */,
+				846BB59726FC883D0040DEFA /* kkk-kp_detector.ptl in Resources */,
 				84E49E5926FADB2200CCBA8E /* generator.ptl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846BB676270461B00040DEFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846BB677270461B00040DEFA /* LaunchScreen.storyboard in Resources */,
+				846BB678270461B00040DEFA /* CPU-generator-SSLW1.ptl in Resources */,
+				846BB679270461B00040DEFA /* myh-389-fps15.json in Resources */,
+				846BB67A270461B00040DEFA /* kkk-generator.ptl in Resources */,
+				846BB67B270461B00040DEFA /* CPU-generator-SLW.ptl in Resources */,
+				846BB67C270461B00040DEFA /* kp_detector.ptl in Resources */,
+				846BB67D270461B00040DEFA /* male_std.jpg in Resources */,
+				846BB67E270461B00040DEFA /* Assets.xcassets in Resources */,
+				846BB67F270461B00040DEFA /* Main.storyboard in Resources */,
+				846BB680270461B00040DEFA /* kkk-kp_detector.ptl in Resources */,
+				846BB681270461B00040DEFA /* generator.ptl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,11 +588,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E49E7126FB07E100CCBA8E /* LaunchScreen.storyboard in Resources */,
+				846BB5AC27006BA70040DEFA /* CPU-generator-SSLW1.ptl in Resources */,
 				84E49E7226FB07E100CCBA8E /* myh-389-fps15.json in Resources */,
+				846BB59B26FC88450040DEFA /* kkk-generator.ptl in Resources */,
+				84E49E8626FB1E2300CCBA8E /* CPU-generator-SLW.ptl in Resources */,
 				84E49E7326FB07E100CCBA8E /* kp_detector.ptl in Resources */,
 				84E49E7426FB07E100CCBA8E /* male_std.jpg in Resources */,
 				84E49E7526FB07E100CCBA8E /* Assets.xcassets in Resources */,
 				84E49E7626FB07E100CCBA8E /* Main.storyboard in Resources */,
+				846BB59826FC883D0040DEFA /* kkk-kp_detector.ptl in Resources */,
 				84E49E7726FB07E100CCBA8E /* generator.ptl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +624,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		846BB65D270461B00040DEFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAnimation_Pytorch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		846BB682270461B00040DEFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		84E49E5D26FB07E100CCBA8E /* [CP] Check Pods Manifest.lock */ = {
@@ -494,7 +732,9 @@
 				8454AC9226F2F26400DC0C74 /* MainViewController.swift in Sources */,
 				8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */,
 				8454ACC626F31CFA00DC0C74 /* CVPixelBufferExtension.swift in Sources */,
+				846BB58C26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */,
 				8454ACD026F32BA600DC0C74 /* GlobalFunc.swift in Sources */,
+				846BB59026FC6DB00040DEFA /* AppCoordinator.swift in Sources */,
 				8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */,
 				84E49E5B26FB03D200CCBA8E /* TimeUtils.swift in Sources */,
 				8454ACC426F31CFA00DC0C74 /* Compareable+Extension.swift in Sources */,
@@ -502,9 +742,42 @@
 				8454ACAB26F2F53B00DC0C74 /* TorchModule.mm in Sources */,
 				8454ACC826F31CFA00DC0C74 /* CGImage+Extension.swift in Sources */,
 				84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */,
+				846BB59326FC6F6D0040DEFA /* MainCoordinator.swift in Sources */,
 				8454ACC526F31CFA00DC0C74 /* String+Extension.swift in Sources */,
 				8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */,
+				846BB59E26FC9E210040DEFA /* FaceAnimation.swift in Sources */,
 				8454ACC726F31CFA00DC0C74 /* UIImageExtension.swift in Sources */,
+				846BB58A26FC60A00040DEFA /* BaseCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846BB65E270461B00040DEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846BB65F270461B00040DEFA /* MainTableViewCell.swift in Sources */,
+				846BB660270461B00040DEFA /* MainViewController.swift in Sources */,
+				846BB661270461B00040DEFA /* Array+Extension.swift in Sources */,
+				846BB68D270462380040DEFA /* kpdetector.mlmodel in Sources */,
+				846BB662270461B00040DEFA /* CVPixelBufferExtension.swift in Sources */,
+				846BB69427055DFB0040DEFA /* generator.mlmodel in Sources */,
+				846BB663270461B00040DEFA /* UIViewController+Extension.swift in Sources */,
+				846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */,
+				846BB664270461B00040DEFA /* GlobalFunc.swift in Sources */,
+				846BB665270461B00040DEFA /* AppCoordinator.swift in Sources */,
+				846BB666270461B00040DEFA /* AppDelegate.swift in Sources */,
+				846BB667270461B00040DEFA /* TimeUtils.swift in Sources */,
+				846BB668270461B00040DEFA /* Compareable+Extension.swift in Sources */,
+				846BB669270461B00040DEFA /* MainViewModel.swift in Sources */,
+				846BB66A270461B00040DEFA /* TorchModule.mm in Sources */,
+				846BB66B270461B00040DEFA /* CGImage+Extension.swift in Sources */,
+				846BB66C270461B00040DEFA /* FileUtils.swift in Sources */,
+				846BB66D270461B00040DEFA /* MainCoordinator.swift in Sources */,
+				846BB66E270461B00040DEFA /* String+Extension.swift in Sources */,
+				846BB692270465420040DEFA /* CMModelTool.swift in Sources */,
+				846BB66F270461B00040DEFA /* SceneDelegate.swift in Sources */,
+				846BB671270461B00040DEFA /* UIImageExtension.swift in Sources */,
+				846BB672270461B00040DEFA /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,19 +785,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846BB58D26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */,
 				84E49E5F26FB07E100CCBA8E /* MainTableViewCell.swift in Sources */,
 				84E49E6026FB07E100CCBA8E /* MainViewController.swift in Sources */,
 				84E49E6126FB07E100CCBA8E /* Array+Extension.swift in Sources */,
 				84E49E6226FB07E100CCBA8E /* CVPixelBufferExtension.swift in Sources */,
 				84E49E6326FB07E100CCBA8E /* GlobalFunc.swift in Sources */,
+				846BB59126FC6DB00040DEFA /* AppCoordinator.swift in Sources */,
+				846BB58E26FC6CB50040DEFA /* BaseCoordinator.swift in Sources */,
 				84E49E6426FB07E100CCBA8E /* AppDelegate.swift in Sources */,
 				84E49E6526FB07E100CCBA8E /* TimeUtils.swift in Sources */,
 				84E49E6626FB07E100CCBA8E /* Compareable+Extension.swift in Sources */,
 				84E49E6726FB07E100CCBA8E /* MainViewModel.swift in Sources */,
 				84E49E6926FB07E100CCBA8E /* CGImage+Extension.swift in Sources */,
 				84E49E6A26FB07E100CCBA8E /* FileUtils.swift in Sources */,
+				846BB59426FC6F6D0040DEFA /* MainCoordinator.swift in Sources */,
 				84E49E8326FB0D6900CCBA8E /* TorchModule.mm in Sources */,
 				84E49E6B26FB07E100CCBA8E /* String+Extension.swift in Sources */,
+				846BB59F26FC9E210040DEFA /* FaceAnimation.swift in Sources */,
 				84E49E6C26FB07E100CCBA8E /* SceneDelegate.swift in Sources */,
 				84E49E6D26FB07E100CCBA8E /* UIImageExtension.swift in Sources */,
 			);
@@ -717,6 +995,55 @@
 			};
 			name = Release;
 		};
+		846BB684270461B00040DEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3KNJF5GGQB;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "FaceAnimation_Pytorch copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shuye.FaceAnimation-Pytorch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceAnimation_Pytorch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		846BB685270461B00040DEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3KNJF5GGQB;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "FaceAnimation_Pytorch copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shuye.FaceAnimation-Pytorch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceAnimation_Pytorch-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		84E49E7A26FB07E100CCBA8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76B9B7C5F3F2F4B8E8439962 /* Pods-FaceAnimation_Pytorch_GPU.debug.xcconfig */;
@@ -783,6 +1110,15 @@
 			buildConfigurations = (
 				8454AC9F26F2F26600DC0C74 /* Debug */,
 				8454ACA026F2F26600DC0C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846BB683270461B00040DEFA /* Build configuration list for PBXNativeTarget "FaceAnimation_Pytorch_CoreML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846BB684270461B00040DEFA /* Debug */,
+				846BB685270461B00040DEFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
