@@ -54,7 +54,6 @@
 		846BB667270461B00040DEFA /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5A26FB03D200CCBA8E /* TimeUtils.swift */; };
 		846BB668270461B00040DEFA /* Compareable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACBE26F31CFA00DC0C74 /* Compareable+Extension.swift */; };
 		846BB669270461B00040DEFA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */; };
-		846BB66A270461B00040DEFA /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACAA26F2F53B00DC0C74 /* TorchModule.mm */; };
 		846BB66B270461B00040DEFA /* CGImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC226F31CFA00DC0C74 /* CGImage+Extension.swift */; };
 		846BB66C270461B00040DEFA /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E4F26F3408300CCBA8E /* FileUtils.swift */; };
 		846BB66D270461B00040DEFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB59226FC6F6D0040DEFA /* MainCoordinator.swift */; };
@@ -769,7 +768,6 @@
 				846BB667270461B00040DEFA /* TimeUtils.swift in Sources */,
 				846BB668270461B00040DEFA /* Compareable+Extension.swift in Sources */,
 				846BB669270461B00040DEFA /* MainViewModel.swift in Sources */,
-				846BB66A270461B00040DEFA /* TorchModule.mm in Sources */,
 				846BB66B270461B00040DEFA /* CGImage+Extension.swift in Sources */,
 				846BB66C270461B00040DEFA /* FileUtils.swift in Sources */,
 				846BB66D270461B00040DEFA /* MainCoordinator.swift in Sources */,
