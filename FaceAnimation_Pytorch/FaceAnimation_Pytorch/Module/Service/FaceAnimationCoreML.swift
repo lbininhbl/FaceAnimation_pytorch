@@ -18,7 +18,7 @@ struct FaceAnimation {
         cmmodelTool.kpDetect(image: image)
             .flatMap { cmmodelTool.generate(image: image, driving_motion_kps: driving_motion_kps, source: $0) }
             .subscribe(onNext: { output in
-                
+//                print(output)
             })
             .disposed(by: bag)
     }

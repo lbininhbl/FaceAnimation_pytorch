@@ -13,12 +13,8 @@ import RxSwift
 class CMModelTool {
     
     lazy var kpDetector: VNCoreMLModel = {
-        let model = try? VNCoreMLModel(for: kpdetector(configuration: .init()).model)
-        return model!
-    }()
-    
-    lazy var generatorModel: VNCoreMLModel = {
-        let model = try? VNCoreMLModel(for: generator(configuration: .init()).model)
+//        let model = try? VNCoreMLModel(for: kpdetector(configuration: .init()).model)
+        let model = try? VNCoreMLModel(for: kpdetector1011(configuration: .init()).model)
         return model!
     }()
     
@@ -75,7 +71,8 @@ extension CMModelTool {
             guard let pixelBuffer = image.pixelBuffer(with: .init(width: 256, height: 256)) else { return dispose }
             
             do {
-                let gen = try generator()
+//                let gen = try generator()
+                let gen = try generator1011()
                 
                 TimeUtil.begin("generator")
                 autoreleasepool {
@@ -90,15 +87,30 @@ extension CMModelTool {
                             let val_arr = (kp_driving["value"] as! [[NSNumber]]).map { $0.map { $0.floatValue } }
                             let val = val_arr.flatMap { $0 }
                             
+//                            let jac = (kp_driving["jacobian"] as! [[[NSNumber]]]).map { $0.map { $0.map { $0.floatValue } } }
+//                            let val = (kp_driving["value"] as! [[NSNumber]]).map { $0.map { $0.floatValue } }
+                            
                             do {
-                                let kp_drv_val = try MLMultiArray(val)
-                                let kp_drv_jac = try MLMultiArray(jac)
+//                                let kp_drv_val = try MLMultiArray(val)
+//                                let kp_drv_jac = try MLMultiArray(jac)
+                                
+                                let kp_drv_val = try MLMultiArray(shape: [1, 10, 2], dataType: MLMultiArrayDataType.float32)
+                                let kp_drv_jac = try MLMultiArray(shape: [1, 10, 2, 2], dataType: MLMultiArrayDataType.float32)
+                                
+                                for (index, element) in val.enumerated() {
+                                    kp_drv_val[index] = NSNumber(floatLiteral: Double(element))
+                                }
+                                
+                                for (index, element) in jac.enumerated() {
+                                    kp_drv_jac[index] = NSNumber(floatLiteral: Double(element))
+                                }
+                                
                                 
                                 let output = try gen.prediction(image_0: pixelBuffer, kp_drv_val: kp_drv_val, kp_drv_jac: kp_drv_jac, kp_src_val: source.value, kp_src_jac: source.jacobian)
                                 
-                                print(output.var_1321)
+//                                print(output.var_1593)
                                 
-                                observer.onNext(output.var_1321)
+                                observer.onNext(output.var_1593)
                             } catch {
                                 print(error)
                                 observer.onError(error)

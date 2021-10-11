@@ -75,9 +75,9 @@
 		846BB680270461B00040DEFA /* kkk-kp_detector.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB59626FC883D0040DEFA /* kkk-kp_detector.ptl */; };
 		846BB681270461B00040DEFA /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
 		846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */; };
-		846BB68D270462380040DEFA /* kpdetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 846BB68C270462380040DEFA /* kpdetector.mlmodel */; };
 		846BB692270465420040DEFA /* CMModelTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB691270465420040DEFA /* CMModelTool.swift */; };
-		846BB69427055DFB0040DEFA /* generator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 846BB68E270462400040DEFA /* generator.mlmodel */; };
+		84A4306D2714338F000D44E4 /* kpdetector1011.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84A4306C2714338F000D44E4 /* kpdetector1011.mlmodel */; };
+		84A4306F27143397000D44E4 /* generator1011.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84A4306E27143397000D44E4 /* generator1011.mlmodel */; };
 		84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E4F26F3408300CCBA8E /* FileUtils.swift */; };
 		84E49E5726F48D5C00CCBA8E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */; };
 		84E49E5926FADB2200CCBA8E /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
@@ -147,9 +147,9 @@
 		846BB686270461B00040DEFA /* FaceAnimation_Pytorch_CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnimation_Pytorch_CoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846BB687270461B10040DEFA /* FaceAnimation_Pytorch copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FaceAnimation_Pytorch copy2-Info.plist"; path = "/Users/admin/Desktop/workflow/ThirdPart-SourceCode/FaceAnimation_pytorch/FaceAnimation_Pytorch/FaceAnimation_Pytorch copy2-Info.plist"; sourceTree = "<absolute>"; };
 		846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAnimationCoreML.swift; sourceTree = "<group>"; };
-		846BB68C270462380040DEFA /* kpdetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = kpdetector.mlmodel; sourceTree = "<group>"; };
-		846BB68E270462400040DEFA /* generator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = generator.mlmodel; sourceTree = "<group>"; };
 		846BB691270465420040DEFA /* CMModelTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMModelTool.swift; sourceTree = "<group>"; };
+		84A4306C2714338F000D44E4 /* kpdetector1011.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = kpdetector1011.mlmodel; sourceTree = "<group>"; };
+		84A4306E27143397000D44E4 /* generator1011.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = generator1011.mlmodel; sourceTree = "<group>"; };
 		84E49E4F26F3408300CCBA8E /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		84E49E5826FADB2200CCBA8E /* generator.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.ptl; sourceTree = "<group>"; };
@@ -405,8 +405,8 @@
 		846BB68B2704622A0040DEFA /* models */ = {
 			isa = PBXGroup;
 			children = (
-				846BB68C270462380040DEFA /* kpdetector.mlmodel */,
-				846BB68E270462400040DEFA /* generator.mlmodel */,
+				84A4306C2714338F000D44E4 /* kpdetector1011.mlmodel */,
+				84A4306E27143397000D44E4 /* generator1011.mlmodel */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -757,9 +757,8 @@
 				846BB65F270461B00040DEFA /* MainTableViewCell.swift in Sources */,
 				846BB660270461B00040DEFA /* MainViewController.swift in Sources */,
 				846BB661270461B00040DEFA /* Array+Extension.swift in Sources */,
-				846BB68D270462380040DEFA /* kpdetector.mlmodel in Sources */,
+				84A4306F27143397000D44E4 /* generator1011.mlmodel in Sources */,
 				846BB662270461B00040DEFA /* CVPixelBufferExtension.swift in Sources */,
-				846BB69427055DFB0040DEFA /* generator.mlmodel in Sources */,
 				846BB663270461B00040DEFA /* UIViewController+Extension.swift in Sources */,
 				846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */,
 				846BB664270461B00040DEFA /* GlobalFunc.swift in Sources */,
@@ -774,6 +773,7 @@
 				846BB66E270461B00040DEFA /* String+Extension.swift in Sources */,
 				846BB692270465420040DEFA /* CMModelTool.swift in Sources */,
 				846BB66F270461B00040DEFA /* SceneDelegate.swift in Sources */,
+				84A4306D2714338F000D44E4 /* kpdetector1011.mlmodel in Sources */,
 				846BB671270461B00040DEFA /* UIImageExtension.swift in Sources */,
 				846BB672270461B00040DEFA /* BaseCoordinator.swift in Sources */,
 			);
