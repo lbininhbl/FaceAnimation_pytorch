@@ -18,6 +18,11 @@ class CMModelTool {
         return model!
     }()
     
+    lazy var generator: VNCoreMLModel = {
+        let model = try? VNCoreMLModel(for: generator1011(configuration: .init()).model)
+        return model!
+    }()
+    
 }
 
 extension CMModelTool {
@@ -71,8 +76,9 @@ extension CMModelTool {
             guard let pixelBuffer = image.pixelBuffer(with: .init(width: 256, height: 256)) else { return dispose }
             
             do {
-//                let gen = try generator()
-                let gen = try generator1011()
+                let configuration = MLModelConfiguration()
+                configuration.computeUnits = .all
+                let gen = try generator1011(configuration: configuration)
                 
                 TimeUtil.begin("generator")
                 autoreleasepool {
@@ -87,30 +93,23 @@ extension CMModelTool {
                             let val_arr = (kp_driving["value"] as! [[NSNumber]]).map { $0.map { $0.floatValue } }
                             let val = val_arr.flatMap { $0 }
                             
-//                            let jac = (kp_driving["jacobian"] as! [[[NSNumber]]]).map { $0.map { $0.map { $0.floatValue } } }
-//                            let val = (kp_driving["value"] as! [[NSNumber]]).map { $0.map { $0.floatValue } }
-                            
                             do {
-//                                let kp_drv_val = try MLMultiArray(val)
-//                                let kp_drv_jac = try MLMultiArray(jac)
-                                
+
                                 let kp_drv_val = try MLMultiArray(shape: [1, 10, 2], dataType: MLMultiArrayDataType.float32)
                                 let kp_drv_jac = try MLMultiArray(shape: [1, 10, 2, 2], dataType: MLMultiArrayDataType.float32)
                                 
                                 for (index, element) in val.enumerated() {
-                                    kp_drv_val[index] = NSNumber(floatLiteral: Double(element))
+                                    kp_drv_val[index] = NSNumber(value: element)
                                 }
                                 
                                 for (index, element) in jac.enumerated() {
-                                    kp_drv_jac[index] = NSNumber(floatLiteral: Double(element))
+                                    kp_drv_jac[index] = NSNumber(value: element)
                                 }
                                 
                                 
                                 let output = try gen.prediction(image_0: pixelBuffer, kp_drv_val: kp_drv_val, kp_drv_jac: kp_drv_jac, kp_src_val: source.value, kp_src_jac: source.jacobian)
-                                
-//                                print(output.var_1593)
-                                
                                 observer.onNext(output.var_1593)
+                                
                             } catch {
                                 print(error)
                                 observer.onError(error)
@@ -127,5 +126,63 @@ extension CMModelTool {
             return dispose
         }
         
+    }
+    
+    
+    
+    func gen_part2(image: UIImage) -> Observable<Any> {
+        return Observable.create { observer in
+            
+            let dispose = Disposables.create()
+            
+            guard let pixelBuffer = image.pixelBuffer(with: .init(width: 256, height: 256)) else { return dispose }
+            
+            do {
+                
+                // 初始化加载模型
+                let configuration = MLModelConfiguration()
+                configuration.computeUnits = .cpuAndGPU
+//                let gen = try generator_part2(configuration: configuration)
+                let gen = try generator_part2_128_128(configuration: configuration)
+                
+                // 准备参数
+                let heatmap = self.randomParam(shape: [1, 11, 1, 64, 64])
+                let sparse = self.randomParam(shape: [1, 11, 64, 64, 2])
+                let deformed = self.randomParam(shape: [1, 11, 3, 64, 64])
+                
+                TimeUtil.begin("generator_part2")
+                let output = try gen.prediction(image_0: pixelBuffer, heatmap_representation: heatmap, sparse_motion: sparse, deformed_source: deformed)
+                
+                print(output.var_1195)
+                observer.onNext(output.var_1195)
+                
+                TimeUtil.end("generator_part2", log: "generator_part2所花时间")
+            } catch {
+                print(error)
+                observer.onError(error)
+            }
+            
+            return dispose
+        }
+    }
+}
+
+private extension CMModelTool {
+    func randomParam(shape: [NSNumber]) -> MLMultiArray {
+        do {
+            let params = try MLMultiArray(shape: shape, dataType: MLMultiArrayDataType.float32)
+            
+            let total = shape.reduce(1) { $0 * $1.intValue }
+            
+            for i in 0..<total {
+                params[i] = NSNumber(value: Float.random(in: 0...1))
+//                print(params[i])
+            }
+            
+            return params
+        } catch {
+            print(error)
+            fatalError(error.localizedDescription)
+        }
     }
 }

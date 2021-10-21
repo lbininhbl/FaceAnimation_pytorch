@@ -25,3 +25,16 @@ target 'FaceAnimation_Pytorch_GPU' do
   pod 'NSObject+Rx'
   pod 'RxDataSources'
 end
+
+target 'FaceAnimation_Pytorch_CoreML' do
+  use_frameworks!
+  
+  pod 'LibTorch-Lite', '~>1.9.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+  pod 'RxDataSources'
+  
+  pod 'RxSwiftExt'
+  pod 'SnapKit'
+end

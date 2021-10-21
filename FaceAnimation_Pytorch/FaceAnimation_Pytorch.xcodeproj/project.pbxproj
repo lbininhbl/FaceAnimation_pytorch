@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36AB73626B5FDB95572B7B85 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		36AB73626B5FDB95572B7B85 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		3CA7843EEBDD1B85E23962D0 /* Pods_FaceAnimation_Pytorch_GPU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D93719EE4B0EA66B4159FF9 /* Pods_FaceAnimation_Pytorch_GPU.framework */; };
+		4700D9ABAE81B7872BDE318A /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */; };
+		4C70CBCCCD51996789452FCC /* Pods_FaceAnimation_Pytorch_CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24D7ADDD3CE28B7C93765AE /* Pods_FaceAnimation_Pytorch_CoreML.framework */; };
 		8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */; };
 		8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
 		8454AC9226F2F26400DC0C74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC9126F2F26400DC0C74 /* MainViewController.swift */; };
@@ -27,6 +29,8 @@
 		8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */; };
 		8454ACCB26F322EE00DC0C74 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */; };
 		8454ACD026F32BA600DC0C74 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */; };
+		845F304F2719833900C175AE /* generator-part2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 845F304E2719833900C175AE /* generator-part2.mlmodel */; };
+		845F305127198AAE00C175AE /* generator-part2-128-128.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 845F305027198AAE00C175AE /* generator-part2-128-128.mlmodel */; };
 		846BB58A26FC60A00040DEFA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58926FC60A00040DEFA /* BaseCoordinator.swift */; };
 		846BB58C26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
 		846BB58D26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
@@ -61,8 +65,6 @@
 		846BB66F270461B00040DEFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
 		846BB671270461B00040DEFA /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC126F31CFA00DC0C74 /* UIImageExtension.swift */; };
 		846BB672270461B00040DEFA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58926FC60A00040DEFA /* BaseCoordinator.swift */; };
-		846BB674270461B00040DEFA /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		846BB675270461B00040DEFA /* Pods_FaceAnimation_Pytorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */; };
 		846BB677270461B00040DEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454AC9826F2F26600DC0C74 /* LaunchScreen.storyboard */; };
 		846BB678270461B00040DEFA /* CPU-generator-SSLW1.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 846BB5AA27006BA70040DEFA /* CPU-generator-SSLW1.ptl */; };
 		846BB679270461B00040DEFA /* myh-389-fps15.json in Resources */ = {isa = PBXBuildFile; fileRef = 8454ACAD26F2F90100DC0C74 /* myh-389-fps15.json */; };
@@ -110,8 +112,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch.release.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch.release.xcconfig"; sourceTree = "<group>"; };
-		37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch.debug.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch.debug.xcconfig"; sourceTree = "<group>"; };
+		144C871D1874F3E1CDE3083C /* Pods-FaceAnimation_Pytorch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch.debug.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch.debug.xcconfig"; sourceTree = "<group>"; };
+		4292C85710BD2172DB59B473 /* Pods-FaceAnimation_Pytorch_CoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch_CoreML.release.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch_CoreML/Pods-FaceAnimation_Pytorch_CoreML.release.xcconfig"; sourceTree = "<group>"; };
 		74BF59C76C85A41BEC338D90 /* Pods-FaceAnimation_Pytorch_GPU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch_GPU.release.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch_GPU/Pods-FaceAnimation_Pytorch_GPU.release.xcconfig"; sourceTree = "<group>"; };
 		76B9B7C5F3F2F4B8E8439962 /* Pods-FaceAnimation_Pytorch_GPU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch_GPU.debug.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch_GPU/Pods-FaceAnimation_Pytorch_GPU.debug.xcconfig"; sourceTree = "<group>"; };
 		8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnimation_Pytorch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,8 @@
 		8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		845F304E2719833900C175AE /* generator-part2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "generator-part2.mlmodel"; sourceTree = "<group>"; };
+		845F305027198AAE00C175AE /* generator-part2-128-128.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "generator-part2-128-128.mlmodel"; sourceTree = "<group>"; };
 		846BB58926FC60A00040DEFA /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -160,6 +164,9 @@
 		84E49E8126FB0D6400CCBA8E /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
 		84E49E8426FB1E2300CCBA8E /* CPU-generator-SLW.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CPU-generator-SLW.ptl"; sourceTree = "<group>"; };
 		8D93719EE4B0EA66B4159FF9 /* Pods_FaceAnimation_Pytorch_GPU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch_GPU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F289423CBA5AB562097065 /* Pods-FaceAnimation_Pytorch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch.release.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch.release.xcconfig"; sourceTree = "<group>"; };
+		A24D7ADDD3CE28B7C93765AE /* Pods_FaceAnimation_Pytorch_CoreML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch_CoreML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA32453515497E23D514B4B9 /* Pods-FaceAnimation_Pytorch_CoreML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnimation_Pytorch_CoreML.debug.xcconfig"; path = "Target Support Files/Pods-FaceAnimation_Pytorch_CoreML/Pods-FaceAnimation_Pytorch_CoreML.debug.xcconfig"; sourceTree = "<group>"; };
 		D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnimation_Pytorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,8 +175,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36AB73626B5FDB95572B7B85 /* (null) in Frameworks */,
+				36AB73626B5FDB95572B7B85 /* BuildFile in Frameworks */,
 				8DBF5AF8287648EC222BD997 /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
+				4700D9ABAE81B7872BDE318A /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846BB674270461B00040DEFA /* (null) in Frameworks */,
-				846BB675270461B00040DEFA /* Pods_FaceAnimation_Pytorch.framework in Frameworks */,
+				4C70CBCCCD51996789452FCC /* Pods_FaceAnimation_Pytorch_CoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +205,7 @@
 			children = (
 				8D93719EE4B0EA66B4159FF9 /* Pods_FaceAnimation_Pytorch_GPU.framework */,
 				D73DC655F0E24DCE0C1EB4BB /* Pods_FaceAnimation_Pytorch.framework */,
+				A24D7ADDD3CE28B7C93765AE /* Pods_FaceAnimation_Pytorch_CoreML.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -407,6 +415,8 @@
 			children = (
 				84A4306C2714338F000D44E4 /* kpdetector1011.mlmodel */,
 				84A4306E27143397000D44E4 /* generator1011.mlmodel */,
+				845F304E2719833900C175AE /* generator-part2.mlmodel */,
+				845F305027198AAE00C175AE /* generator-part2-128-128.mlmodel */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -442,10 +452,12 @@
 		C276850E207ADD91A5194959 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */,
-				21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */,
 				76B9B7C5F3F2F4B8E8439962 /* Pods-FaceAnimation_Pytorch_GPU.debug.xcconfig */,
 				74BF59C76C85A41BEC338D90 /* Pods-FaceAnimation_Pytorch_GPU.release.xcconfig */,
+				144C871D1874F3E1CDE3083C /* Pods-FaceAnimation_Pytorch.debug.xcconfig */,
+				91F289423CBA5AB562097065 /* Pods-FaceAnimation_Pytorch.release.xcconfig */,
+				CA32453515497E23D514B4B9 /* Pods-FaceAnimation_Pytorch_CoreML.debug.xcconfig */,
+				4292C85710BD2172DB59B473 /* Pods-FaceAnimation_Pytorch_CoreML.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -476,11 +488,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846BB683270461B00040DEFA /* Build configuration list for PBXNativeTarget "FaceAnimation_Pytorch_CoreML" */;
 			buildPhases = (
-				846BB65D270461B00040DEFA /* [CP] Check Pods Manifest.lock */,
+				862E0D4EF38EFF335FAF303E /* [CP] Check Pods Manifest.lock */,
 				846BB65E270461B00040DEFA /* Sources */,
 				846BB673270461B00040DEFA /* Frameworks */,
 				846BB676270461B00040DEFA /* Resources */,
-				846BB682270461B00040DEFA /* [CP] Embed Pods Frameworks */,
+				CA92774645D3EDD1ECAA92AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -625,45 +637,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		846BB65D270461B00040DEFA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FaceAnimation_Pytorch-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		846BB682270461B00040DEFA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch/Pods-FaceAnimation_Pytorch-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		84E49E5D26FB07E100CCBA8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -701,6 +674,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch_GPU/Pods-FaceAnimation_Pytorch_GPU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		862E0D4EF38EFF335FAF303E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAnimation_Pytorch_CoreML-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA92774645D3EDD1ECAA92AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch_CoreML/Pods-FaceAnimation_Pytorch_CoreML-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch_CoreML/Pods-FaceAnimation_Pytorch_CoreML-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAnimation_Pytorch_CoreML/Pods-FaceAnimation_Pytorch_CoreML-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2B61DE162ED3F676EE74804 /* [CP] Embed Pods Frameworks */ = {
@@ -774,6 +786,8 @@
 				846BB692270465420040DEFA /* CMModelTool.swift in Sources */,
 				846BB66F270461B00040DEFA /* SceneDelegate.swift in Sources */,
 				84A4306D2714338F000D44E4 /* kpdetector1011.mlmodel in Sources */,
+				845F305127198AAE00C175AE /* generator-part2-128-128.mlmodel in Sources */,
+				845F304F2719833900C175AE /* generator-part2.mlmodel in Sources */,
 				846BB671270461B00040DEFA /* UIImageExtension.swift in Sources */,
 				846BB672270461B00040DEFA /* BaseCoordinator.swift in Sources */,
 			);
@@ -946,7 +960,7 @@
 		};
 		8454AC9F26F2F26600DC0C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */;
+			baseConfigurationReference = 144C871D1874F3E1CDE3083C /* Pods-FaceAnimation_Pytorch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -971,7 +985,7 @@
 		};
 		8454ACA026F2F26600DC0C74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */;
+			baseConfigurationReference = 91F289423CBA5AB562097065 /* Pods-FaceAnimation_Pytorch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -995,7 +1009,7 @@
 		};
 		846BB684270461B00040DEFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37416D117643DE7F79039040 /* Pods-FaceAnimation_Pytorch.debug.xcconfig */;
+			baseConfigurationReference = CA32453515497E23D514B4B9 /* Pods-FaceAnimation_Pytorch_CoreML.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1020,7 +1034,7 @@
 		};
 		846BB685270461B00040DEFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21D354966668F02E0FEBD2C3 /* Pods-FaceAnimation_Pytorch.release.xcconfig */;
+			baseConfigurationReference = 4292C85710BD2172DB59B473 /* Pods-FaceAnimation_Pytorch_CoreML.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
