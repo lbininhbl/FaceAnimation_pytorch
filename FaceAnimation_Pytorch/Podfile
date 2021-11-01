@@ -37,4 +37,6 @@ target 'FaceAnimation_Pytorch_CoreML' do
   
   pod 'RxSwiftExt'
   pod 'SnapKit'
+  
+  pod 'OpenCV'
 end

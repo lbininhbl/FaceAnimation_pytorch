@@ -23,10 +23,8 @@ class MainCoordinator: BaseCoordinator<Void> {
         navc.isNavigationBarHidden = true
         
         vc.viewModel = viewModel
+        viewModel.bindModel()
         
-        Observable.combineLatest(viewModel.execute, viewModel.image) { _, image in
-            viewModel.faceAnimation.test(image: image, driving_motion_kps: viewModel.driving_motion_kps)
-        }.subscribe().disposed(by: disposeBag)
         
         window.rootViewController = navc
         window.makeKeyAndVisible()

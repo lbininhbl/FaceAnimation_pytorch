@@ -38,6 +38,12 @@ class MainViewController: UIViewController, StoryboardInitializable {
     private func bindViewModel() {
         viewModel.image.bind(to: imageView.rx.image).disposed(by: rx.disposeBag)
         
+        viewModel.resultImage.bind(to: imageView.rx.image).disposed(by: rx.disposeBag)
+        
+        viewModel.video.subscribe(onNext: { [weak self] url in
+            PlayUtil.shared.play(url: url, on: self?.imageView)
+        }).disposed(by: rx.disposeBag)
+        
         viewModel.list.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: MainTableViewCell.self)) { _, title, cell in
             cell.titleLabel.text = title
         }.disposed(by: rx.disposeBag)

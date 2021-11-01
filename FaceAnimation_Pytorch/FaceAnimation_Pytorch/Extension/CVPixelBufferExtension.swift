@@ -7,6 +7,7 @@
 
 import Foundation
 import Accelerate
+import RxSwift
 
 extension CVPixelBuffer {
     func centerThumbnail(of size: CGSize) -> CVPixelBuffer? {
@@ -121,5 +122,37 @@ extension CVPixelBuffer {
         }
         
         return thumbnailPixelBuffer
+    }
+    
+    func normalize() {
+        let width = CVPixelBufferGetWidth(self)
+        let height = CVPixelBufferGetHeight(self)
+        
+        CVPixelBufferLockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
+        let floatBuffer = unsafeBitCast(CVPixelBufferGetBaseAddress(self), to: UnsafeMutablePointer<Float>.self)
+    
+        for y in 0..<height {
+            for x in 0..<width {
+                let pixel = floatBuffer[y * width + x]
+                floatBuffer[y * width + x] = pixel / 255.0
+            }
+        }
+        CVPixelBufferUnlockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
+        
+    }
+}
+
+extension CVPixelBuffer {
+    var rx_image: Observable<UIImage> {
+        Observable.create { observer in
+            let ciImage = CIImage(cvPixelBuffer: self)
+            let context = CIContext()
+            if let cgImage = context.createCGImage(ciImage, from: CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(self), height: CVPixelBufferGetHeight(self))) {
+                let image = UIImage(cgImage: cgImage)
+                observer.onNext(image)
+                observer.onCompleted()
+            }
+            return Disposables.create()
+        }
     }
 }

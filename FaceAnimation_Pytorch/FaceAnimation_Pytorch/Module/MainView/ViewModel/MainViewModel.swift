@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class MainViewModel {
     
@@ -17,7 +18,11 @@ class MainViewModel {
     
     // MARK: - Outputs
     let list: Observable<[String]>
+    let resultImage: PublishSubject<UIImage>
     
+    let video: PublishRelay<URL>
+    
+    private let bag = DisposeBag()
     
     let faceAnimation: FaceAnimation
     
@@ -28,17 +33,47 @@ class MainViewModel {
         self.faceAnimation = faceAnimation
         
         // 初始化 fps
-        let driving_kp_name = "myh-389-fps15"
+//        let driving_kp_name = "myh-389-fps15"
+        let driving_kp_name = "myh_fps_down-bd-fps15"
         driving_motion_kps = FileUtils.load(name: driving_kp_name, type: "json") as? [[String: Any]]
         
         // 初始化图片
-        let imagePath = Bundle.main.path(forResource: "male_std", ofType: "jpg")!
+        let imagePath = Bundle.main.path(forResource: "laotou", ofType: "png")!
         let testImage = UIImage(contentsOfFile: imagePath)!
         image = BehaviorSubject<UIImage>(value: testImage)
         
         // 初始化列表
-        self.list = Observable<[String]>.just(["开始执行"])
+        self.list = Observable<[String]>.just(["开始执行", "开始执行-RxSwift"])
         
         self.execute = PublishSubject<String>()
+        
+        self.resultImage = PublishSubject<UIImage>()
+        
+        self.video = PublishRelay<URL>()
+    }
+    
+    func bindModel() {
+        
+        /// 这里也可以用sample，不过则是需要将execute作为参数。
+        execute.share().filter { $0 == "开始执行" }.withLatestFrom(image)
+            .subscribe(onNext: { image in
+                self.faceAnimation.test2(image: image, driving_motion_kps: self.driving_motion_kps) { image in
+                    self.resultImage.onNext(image)
+                } completion: { url in
+                    self.video.accept(url)
+                }
+            })
+            .disposed(by: bag)
+        
+        execute.share().filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
+            .subscribe(onNext: { image in
+                self.faceAnimation.test(image: image, driving_motion_kps: self.driving_motion_kps) { image in
+                    self.resultImage.onNext(image)
+                } completion: { url in
+                    self.video.accept(url)
+                }
+            })
+            .disposed(by: bag)
+        
     }
 }
