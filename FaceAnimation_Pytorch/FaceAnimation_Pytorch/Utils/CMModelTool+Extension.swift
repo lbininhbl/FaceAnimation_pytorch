@@ -51,10 +51,7 @@ extension CMModelTool {
         do {
             let configuration = MLModelConfiguration()
             configuration.computeUnits = .cpuAndGPU
-//            let gen = try generator_NormInput(configuration: configuration)
-//            let gen = try generator_pd_149_smooth(configuration: configuration)
-//            let gen = try generator_pd_149_smooth0(configuration: configuration)
-            let gen = try generator_pd_149_smooth_rgb(configuration: configuration)
+            let gen = try generator_pd149(configuration: configuration)
             
             let processor = try kpprocessor(configuration: configuration)
             
@@ -96,32 +93,12 @@ extension CMModelTool {
                                                                  kp_drv_init_val: kp_drv_init_val, kp_drv_init_jac: kp_drv_init_jac,
                                                                  kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
                             
-//                            var times: [TimeInterval] = []
-//                            TimeUtil.begin("generator")
-//                            for _ in 0..<10 {
-//                                TimeUtil.begin("once generator")
-//                                let output = try gen.prediction(image_0: pixelBuffer,
-//                                                                kp_drv_val: normal.var_9, kp_drv_jac: normal.var_147,
-//                                                                kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
-//                                let time = TimeUtil.end("once generator", log: "once generator")
-//                                times.append(time)
-//                            }
-//                            TimeUtil.end("generator", log: "ten generator")
-//
-//                            let average = times.reduce(0, +) / Double(times.count)
-//                            print("\(times.count)次平均:\(average)s")
-                            
-                            
-                            let output = try gen.prediction(image_0: pixelBuffer,
-                                                            kp_drv_val: normal.var_9, kp_drv_jac: normal.var_147,
+                            let output = try gen.prediction(src_image: pixelBuffer,
+                                                            kp_drv_val: normal.kp_val_norm, kp_drv_jac: normal.kp_jac_norm,
                                                             kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
                             TimeUtil.end("once_processor", log: "processor + generator")
                             
-//                            observer.onNext(output.var_1593)
-                            
-//                            completion(output.var_1593)
-//                            completion(output.var_1600)
-                            completion(output.var_1608)
+                            completion(output.pred_img)
                             
                         } catch {
                             print(error)

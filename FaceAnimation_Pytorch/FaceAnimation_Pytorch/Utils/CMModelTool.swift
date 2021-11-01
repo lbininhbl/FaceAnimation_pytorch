@@ -14,9 +14,7 @@ import Accelerate
 class CMModelTool {
     
     lazy var kpDetector: VNCoreMLModel = {
-//        let model = try? VNCoreMLModel(for: kpdetector(configuration: .init()).model)
-//        let model = try? VNCoreMLModel(for: kpdetector1011(configuration: .init()).model)
-        let model = try? VNCoreMLModel(for: kpdetector_NormInput(configuration: .init()).model)
+        let model = try? VNCoreMLModel(for: kpdetector_pd149(configuration: .init()).model)
         return model!
     }()
 }
@@ -76,8 +74,7 @@ extension CMModelTool {
                 
                 let configuration = MLModelConfiguration()
                 configuration.computeUnits = .cpuAndGPU
-//                let gen = try generator_NormInput(configuration: configuration)
-                let gen = try gen_pd149_image(configuration: configuration)
+                let gen = try generator_pd149(configuration: configuration)
                 
                 let processor = try kpprocessor(configuration: configuration)
                 
@@ -118,12 +115,11 @@ extension CMModelTool {
                                                                      kp_drv_init_val: kp_drv_init_val, kp_drv_init_jac: kp_drv_init_jac,
                                                                      kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
                                 
-                                
-                                let output = try gen.prediction(image_0: pixelBuffer,
-                                                                kp_drv_val: normal.var_9, kp_drv_jac: normal.var_147,
+                                let output = try gen.prediction(src_image: pixelBuffer,
+                                                                kp_drv_val: normal.kp_val_norm, kp_drv_jac: normal.kp_jac_norm,
                                                                 kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
                                 
-                                observer.onNext(output.var_1607)
+                                observer.onNext(output.pred_img)
                                 
                             } catch {
                                 print(error)
@@ -143,98 +139,6 @@ extension CMModelTool {
             return dispose
         }
     }
-    
-    func generate(image: UIImage, normal_kps: (value: MLMultiArray, jacobian: MLMultiArray), detectResult: (value: MLMultiArray, jacobian: MLMultiArray)) -> Observable<MLMultiArray> {
-        
-        return Observable.create { observer in
-            
-            let dispose = Disposables.create()
-            
-            guard let pixelBuffer = image.pixelBuffer(with: .init(width: 256, height: 256)) else { return dispose }
-            
-            do {
-                let configuration = MLModelConfiguration()
-                configuration.computeUnits = .cpuAndGPU
-                let gen = try generator_NormInput(configuration: configuration)
-                
-                TimeUtil.begin("generator")
-                let output = try gen.prediction(image_0: pixelBuffer,
-                                                kp_drv_val: normal_kps.value, kp_drv_jac: normal_kps.jacobian,
-                                                kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
-                observer.onNext(output.var_1593)
-                TimeUtil.end("generator", log: "generator所花时间")
-            } catch {
-                print(error)
-                observer.onError(error)
-            }
-            
-            return dispose
-        }
-    }
-    
-//    func generate(image: UIImage, driving_motion_kps: [[String: Any]], detectResult: (value: MLMultiArray, jacobian: MLMultiArray)) -> Observable<MLMultiArray> {
-//
-//        return Observable.create { observer in
-//
-//            let dispose = Disposables.create()
-//
-//            guard let pixelBuffer = image.pixelBuffer(with: .init(width: 256, height: 256)) else { return dispose }
-//
-//            do {
-//                let configuration = MLModelConfiguration()
-//                configuration.computeUnits = .cpuAndGPU
-//                let gen = try generator_NormInput(configuration: configuration)
-//
-//                TimeUtil.begin("generator")
-//                autoreleasepool {
-//                    let count = driving_motion_kps.count
-//                    for (index, kp_driving) in driving_motion_kps.enumerated() {
-//                        autoreleasepool {
-//                            let text = String(format: "generator,进度:%.2f%%", (Float(index) / Float(count)) * 100.0)
-//                            print(text)
-//
-//                            let jac_arr = (kp_driving["jacobian"] as! [[[NSNumber]]]).map { $0.map { $0.map { $0.floatValue } } }
-//                            let jac = jac_arr.flatMap { $0.flatMap { $0 } }
-//                            let val_arr = (kp_driving["value"] as! [[NSNumber]]).map { $0.map { $0.floatValue } }
-//                            let val = val_arr.flatMap { $0 }
-//
-//                            do {
-//
-//                                let kp_drv_val = try MLMultiArray(shape: [1, 10, 2], dataType: MLMultiArrayDataType.float32)
-//                                let kp_drv_jac = try MLMultiArray(shape: [1, 10, 2, 2], dataType: MLMultiArrayDataType.float32)
-//
-//                                for (index, element) in val.enumerated() {
-//                                    kp_drv_val[index] = NSNumber(value: element)
-//                                }
-//
-//                                for (index, element) in jac.enumerated() {
-//                                    kp_drv_jac[index] = NSNumber(value: element)
-//                                }
-//
-//                                let output = try gen.prediction(image_0: pixelBuffer,
-//                                                                kp_drv_val: kp_drv_val, kp_drv_jac: kp_drv_jac,
-//                                                                kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
-////                                observer.onNext(output.var_1593)
-//
-//                            } catch {
-//                                print(error)
-//                                observer.onError(error)
-//                            }
-//                        }
-//                    }
-//                }
-//                observer.onCompleted()
-//                TimeUtil.end("generator", log: "generator所花时间")
-//            } catch {
-//                print(error)
-//                observer.onError(error)
-//            }
-//
-//            return dispose
-//        }
-//    }
-//
-    
     
 }
 
