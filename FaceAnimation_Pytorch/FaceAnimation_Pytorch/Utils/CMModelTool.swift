@@ -74,7 +74,8 @@ extension CMModelTool {
                 
                 let configuration = MLModelConfiguration()
                 configuration.computeUnits = .cpuAndGPU
-                let gen = try generator_pd149(configuration: configuration)
+//                let gen = try generator_pd149(configuration: configuration)
+                let gen = try generator_pd149_maybeBGR(configuration: configuration)
                 
                 let processor = try kpprocessor(configuration: configuration)
                 

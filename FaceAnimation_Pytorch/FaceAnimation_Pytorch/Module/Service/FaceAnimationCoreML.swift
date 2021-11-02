@@ -16,34 +16,53 @@ struct FaceAnimation {
     private let bag = DisposeBag()
     
 //  coreml 中的维度顺序 (channels, height, width)
-    func test(image: UIImage, driving_motion_kps: [[String: Any]], duration: ((UIImage) -> Void)? = nil, completion: ((URL) -> Void)? = nil) {
+    func test(image: UIImage, driving_motion_kps: [[String: Any]], progress: ((UIImage) -> Void)? = nil, completion: ((URL) -> Void)? = nil) {
         DispatchQueue.global().async {
             
-            var images: [UIImage] = []
-            TimeUtil.begin("total")
+//            var images: [UIImage] = []
+            TimeUtil.begin("before video")
+            
+            let audioPath = Bundle.main.path(forResource: "myh-fps15", ofType: "mp3")!
+            let audioUrl = URL(fileURLWithPath: audioPath)
+            let duration = CompositionTool.duration(of: audioUrl)
+            let path = FilePath.path(subPath: "/test1.mov", shouldClear: true)
+            var videoWriter = VideoWriter(path: path, imagesCount: driving_motion_kps.count, size: image.size, duration: duration, fps: 15)
             
             cmmodelTool.kpDetect(image: image)
                 .flatMap({ cmmodelTool.processor(image: image, driving_motion_kps: driving_motion_kps, detectResult: $0) })
-                .flatMap({ $0.rx_image })
+//                .flatMap({ $0.rx_image })
                 .subscribe(onNext: { output in
                     
-                    images.append(output)
+//                    images.append(output)
+//
+//                    let brgImage = OpenCVWrapper.bgrImage(output)
+//
+//                    DispatchQueue.main.async {
+//                        progress?(brgImage)
+//                    }
                     
-                    let brgImage = OpenCVWrapper.bgrImage(output)
+                    videoWriter.append(data: output)
                     
-                    DispatchQueue.main.async {
-                        duration?(brgImage)
-                    }
                 }, onCompleted: {
                     
-                    TimeUtil.end("total", log: "total")
+                    TimeUtil.end("before video", log: "before video")
                     
-                    TimeUtil.begin("move")
+//                    makeMovie(with: images, size: image.size, fps: 15) { url in
+//                        TimeUtil.end("move", log: "move")
+//                        DispatchQueue.main.async {
+//                            completion?(url)
+//                        }
+//                    }
                     
-                    makeMovie(with: images, size: image.size, fps: 15) { url in
-                        TimeUtil.end("move", log: "move")
-                        DispatchQueue.main.async {
-                            completion?(url)
+                    videoWriter.finish { url in
+                        
+                        CompositionTool.merge(videoURL: url, audioURL: audioUrl) { fileUrl, error in
+                            DispatchQueue.main.async {
+                                if let fileUrl = fileUrl {
+                                    TimeUtil.end("before video", log: "after video")
+                                    completion?(fileUrl)
+                                }
+                            }
                         }
                     }
                 })
