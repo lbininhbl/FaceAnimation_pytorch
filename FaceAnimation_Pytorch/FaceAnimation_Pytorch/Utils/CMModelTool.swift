@@ -119,7 +119,7 @@ extension CMModelTool {
                                                                 kp_drv_val: normal.kp_val_norm, kp_drv_jac: normal.kp_jac_norm,
                                                                 kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
                                 
-                                observer.onNext(output.pred_img)
+                                observer.onNext(output.pred_image)
                                 
                             } catch {
                                 print(error)

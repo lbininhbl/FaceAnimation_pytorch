@@ -19,7 +19,8 @@ extension FaceAnimation {
                 
                 cmmodelTool.processor(image: image, driving_motion_kps: driving_motion_kps, detectResult: (value, jac)) { output in
                     TimeUtil.begin("ml")
-                    let res = output.image(axes: (3, 1, 2), transform: true)
+//                    let res = output.image(axes: (3, 1, 2), transform: true)
+                    let res = output.image
 //                    let sss = OpenCVWrapper.bgrImage(res!)
                     images.append(res!)
                     TimeUtil.end("ml", log: "转图片")

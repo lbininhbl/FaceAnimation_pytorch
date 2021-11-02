@@ -45,7 +45,7 @@ extension CMModelTool {
         }
     }
     
-    func processor(image: UIImage, driving_motion_kps: [[String: Any]], detectResult: (value: MLMultiArray, jacobian: MLMultiArray), completion: (MLMultiArray) -> Void, finish: () -> Void)  {
+    func processor(image: UIImage, driving_motion_kps: [[String: Any]], detectResult: (value: MLMultiArray, jacobian: MLMultiArray), completion: (CVPixelBuffer) -> Void, finish: () -> Void)  {
         guard let pixelBuffer = image.pixelBuffer(with: .init(width: 256, height: 256)) else { return }
         
         do {
@@ -98,7 +98,7 @@ extension CMModelTool {
                                                             kp_src_val: detectResult.value, kp_src_jac: detectResult.jacobian)
                             TimeUtil.end("once_processor", log: "processor + generator")
                             
-                            completion(output.pred_img)
+                            completion(output.pred_image)
                             
                         } catch {
                             print(error)

@@ -143,6 +143,17 @@ extension CVPixelBuffer {
 }
 
 extension CVPixelBuffer {
+    
+    var image: UIImage? {
+        let ciImage = CIImage(cvPixelBuffer: self)
+        let context = CIContext()
+        if let cgImage = context.createCGImage(ciImage, from: CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(self), height: CVPixelBufferGetHeight(self))) {
+            let image = UIImage(cgImage: cgImage)
+            return image
+        }
+        return nil
+    }
+    
     var rx_image: Observable<UIImage> {
         Observable.create { observer in
             let ciImage = CIImage(cvPixelBuffer: self)

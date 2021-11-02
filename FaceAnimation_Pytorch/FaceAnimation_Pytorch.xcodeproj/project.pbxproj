@@ -103,9 +103,9 @@
 		84BA768E272BCBBC00D75893 /* myh-fps15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84BA768C272BCBBB00D75893 /* myh-fps15.mp3 */; };
 		84BA768F272BCBBC00D75893 /* myh-fps15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84BA768C272BCBBB00D75893 /* myh-fps15.mp3 */; };
 		84BA76A3272F897600D75893 /* FaceAnimationCoreML+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA76A0272F897600D75893 /* FaceAnimationCoreML+Extension.swift */; };
-		84D94C2E27300ADF00ED9906 /* generator-pd149.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84D94C2D27300ADF00ED9906 /* generator-pd149.mlmodel */; };
 		84D94C3027300AE800ED9906 /* kpdetector-pd149.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84D94C2F27300AE800ED9906 /* kpdetector-pd149.mlmodel */; };
 		84D94C3227300AF100ED9906 /* kpprocessor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84D94C3127300AF100ED9906 /* kpprocessor.mlmodel */; };
+		84D94C342730D93100ED9906 /* generator-pd149.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84D94C332730D93100ED9906 /* generator-pd149.mlmodel */; };
 		84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E4F26F3408300CCBA8E /* FileUtils.swift */; };
 		84E49E5726F48D5C00CCBA8E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */; };
 		84E49E5926FADB2200CCBA8E /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
@@ -205,9 +205,9 @@
 		84BA7682272BC98B00D75893 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		84BA768C272BCBBB00D75893 /* myh-fps15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "myh-fps15.mp3"; sourceTree = "<group>"; };
 		84BA76A0272F897600D75893 /* FaceAnimationCoreML+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaceAnimationCoreML+Extension.swift"; sourceTree = "<group>"; };
-		84D94C2D27300ADF00ED9906 /* generator-pd149.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "generator-pd149.mlmodel"; sourceTree = "<group>"; };
 		84D94C2F27300AE800ED9906 /* kpdetector-pd149.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "kpdetector-pd149.mlmodel"; sourceTree = "<group>"; };
 		84D94C3127300AF100ED9906 /* kpprocessor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = kpprocessor.mlmodel; sourceTree = "<group>"; };
+		84D94C332730D93100ED9906 /* generator-pd149.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "generator-pd149.mlmodel"; sourceTree = "<group>"; };
 		84E49E4F26F3408300CCBA8E /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		84E49E5626F48D5C00CCBA8E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		84E49E5826FADB2200CCBA8E /* generator.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = generator.ptl; sourceTree = "<group>"; };
@@ -488,7 +488,7 @@
 		846BB68B2704622A0040DEFA /* models */ = {
 			isa = PBXGroup;
 			children = (
-				84D94C2D27300ADF00ED9906 /* generator-pd149.mlmodel */,
+				84D94C332730D93100ED9906 /* generator-pd149.mlmodel */,
 				84D94C3127300AF100ED9906 /* kpprocessor.mlmodel */,
 				84D94C2F27300AE800ED9906 /* kpdetector-pd149.mlmodel */,
 			);
@@ -891,6 +891,7 @@
 				84BA76A3272F897600D75893 /* FaceAnimationCoreML+Extension.swift in Sources */,
 				846BB663270461B00040DEFA /* UIViewController+Extension.swift in Sources */,
 				846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */,
+				84D94C342730D93100ED9906 /* generator-pd149.mlmodel in Sources */,
 				846BB664270461B00040DEFA /* GlobalFunc.swift in Sources */,
 				846BB665270461B00040DEFA /* AppCoordinator.swift in Sources */,
 				84EA2773272AA2210085F120 /* CGBitmapInfo+Extension.swift in Sources */,
@@ -903,7 +904,6 @@
 				846BB66B270461B00040DEFA /* CGImage+Extension.swift in Sources */,
 				846BB66C270461B00040DEFA /* FileUtils.swift in Sources */,
 				846BB66D270461B00040DEFA /* MainCoordinator.swift in Sources */,
-				84D94C2E27300ADF00ED9906 /* generator-pd149.mlmodel in Sources */,
 				84BA7685272BC98B00D75893 /* CompositionTool.swift in Sources */,
 				846BB66E270461B00040DEFA /* String+Extension.swift in Sources */,
 				846BB692270465420040DEFA /* CMModelTool.swift in Sources */,
