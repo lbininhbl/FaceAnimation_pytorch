@@ -26,7 +26,6 @@ class MainViewModel {
     
     let faceAnimation: FaceAnimation
     
-    
     private(set) var driving_motion_kps: [[String: Any]]!
     
     init(faceAnimation: FaceAnimation) {
@@ -38,12 +37,13 @@ class MainViewModel {
         driving_motion_kps = FileUtils.load(name: driving_kp_name, type: "json") as? [[String: Any]]
         
         // 初始化图片
-        let imagePath = Bundle.main.path(forResource: "laotou", ofType: "png")!
+        let imagePath = Bundle.main.path(forResource: "ctf", ofType: "jpg")!
+//        let imagePath = Bundle.main.path(forResource: "laotou", ofType: "png")!
         let testImage = UIImage(contentsOfFile: imagePath)!
         image = BehaviorSubject<UIImage>(value: testImage)
         
         // 初始化列表
-        self.list = Observable<[String]>.just(["开始执行", "开始执行-RxSwift"])
+        self.list = Observable<[String]>.just(["开始执行-RxSwift", "重播", "保存到相册"])
         
         self.execute = PublishSubject<String>()
         
@@ -55,7 +55,7 @@ class MainViewModel {
     func bindModel() {
         
         /// 这里也可以用sample，不过则是需要将execute作为参数。
-        execute.share().filter { $0 == "开始执行" }.withLatestFrom(image)
+        execute.filter { $0 == "开始执行" }.withLatestFrom(image)
             .subscribe(onNext: { image in
                 self.faceAnimation.test2(image: image, driving_motion_kps: self.driving_motion_kps) { image in
                     self.resultImage.onNext(image)
@@ -65,7 +65,7 @@ class MainViewModel {
             })
             .disposed(by: bag)
         
-        execute.share().filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
+        execute.filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
             .subscribe(onNext: { image in
                 self.faceAnimation.test(image: image, driving_motion_kps: self.driving_motion_kps) { image in
                     self.resultImage.onNext(image)
@@ -75,5 +75,17 @@ class MainViewModel {
             })
             .disposed(by: bag)
         
+        execute.filter { $0 == "重播" }.withLatestFrom(video)
+            .subscribe(onNext: { url in
+                self.video.accept(url)
+            })
+            .disposed(by: bag)
+        
+        execute.filter { $0 == "保存到相册" }.withLatestFrom(video)
+            .flatMap { AlbumUtils.save(url: $0) }
+            .subscribe(onCompleted: {
+                print("保存成功")
+            })
+            .disposed(by: bag)
     }
 }

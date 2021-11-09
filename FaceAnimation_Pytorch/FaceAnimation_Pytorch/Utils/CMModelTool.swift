@@ -11,7 +11,7 @@ import Vision
 import RxSwift
 import Accelerate
 
-class CMModelTool {
+final class CMModelTool {
     
     lazy var kpDetector: VNCoreMLModel = {
         let model = try? VNCoreMLModel(for: kpdetector_pd149(configuration: .init()).model)
@@ -20,7 +20,7 @@ class CMModelTool {
 }
 
 extension CMModelTool {
-    func kpDetect(image: UIImage) -> Observable<(value: MLMultiArray, jacobian: MLMultiArray)> {
+    func kpDetect(image: UIImage) -> Observable<(result: (value: MLMultiArray, jacobian: MLMultiArray), image: UIImage)> {
         
         return Observable.create { observer in
             
@@ -44,7 +44,7 @@ extension CMModelTool {
                     }
                     
                     assert(predictResult.count >= 2, "结果数量不对")
-                    observer.onNext((predictResult[0], predictResult[1]))
+                    observer.onNext(((predictResult[0], predictResult[1]), image))
                     observer.onCompleted()
                 }
             }
@@ -74,7 +74,6 @@ extension CMModelTool {
                 
                 let configuration = MLModelConfiguration()
                 configuration.computeUnits = .cpuAndGPU
-//                let gen = try generator_pd149(configuration: configuration)
                 let gen = try generator_pd149_maybeBGR(configuration: configuration)
                 
                 let processor = try kpprocessor(configuration: configuration)
@@ -111,6 +110,7 @@ extension CMModelTool {
                                     kp_drv_init_val = kp_drv_val
                                     kp_drv_init_jac = kp_drv_jac
                                 }
+                                
                                 
                                 let normal = try processor.prediction(kp_drv_val: kp_drv_val, kp_drv_jac: kp_drv_jac,
                                                                      kp_drv_init_val: kp_drv_init_val, kp_drv_init_jac: kp_drv_init_jac,

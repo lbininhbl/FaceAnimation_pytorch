@@ -91,6 +91,8 @@ fastlane/test_output
 iOSInjectionProject/
 
 .DS_Store
-pytorch_model
-coreml_model
-infer_pym.py
+pytorch_model/
+coreml_model/
+tflite_model/
+*.py
+*.mp4

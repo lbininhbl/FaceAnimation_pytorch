@@ -7,59 +7,6 @@
 
 import UIKit
 
-//infix operator ???: NilCoalescingPrecedence
-//
-//public func ???<T>(opts: T?, defaultValue: @autoclosure () -> String) -> String {
-//    switch opts {
-//    case let value?: return String(describing: value)
-//    case nil: return defaultValue()
-//    }
-//}
-//
-//extension Optional {
-//    func map<U>(transform: (Wrapped) -> U) -> U? {
-//        guard let value = self else { return nil }
-//        return transform(value)
-//    }
-//    
-//    func flatMap<U>(transform: (Wrapped) -> U?) -> U? {
-//        if let value = self, let transformed = transform(value) {
-//            return transformed
-//        }
-//        return nil
-//    }
-//}
-//
-//extension Sequence {
-//    func compactMap<B>(_ transform: (Element) -> B?) -> [B] {
-//        return lazy.map(transform).filter { $0 != nil }.map { $0! }
-//    }
-//}
-//
-//extension Optional: Equatable where Wrapped: Equatable {
-//    static func ==(lhs: Wrapped?, rhs: Wrapped?) -> Bool {
-//        switch (lhs, rhs) {
-//        case (nil, nil): return true
-//        case let (x?, y?): return x == y
-//        case (_?, nil), (nil, _?): return false
-//        }
-//    }
-//}
-//
-//infix operator !!
-//
-//func !!<T>(wrapped: T?, falureText: @autoclosure () -> String) -> T {
-//    if let x = wrapped { return x }
-//    fatalError(falureText())
-//}
-//
-//infix operator !?
-//
-//func !?<T: ExpressibleByIntegerLiteral>(wrapped: T?, failureText: @autoclosure () -> String) -> T {
-//    assert(wrapped != nil, failureText())
-//    return wrapped ?? 0
-//}
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     

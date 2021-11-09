@@ -39,4 +39,6 @@ target 'FaceAnimation_Pytorch_CoreML' do
   pod 'SnapKit'
   
   pod 'OpenCV'
+  pod 'TensorFlowLiteSwift', :subspecs => ['CoreML', 'Metal']
+  
 end

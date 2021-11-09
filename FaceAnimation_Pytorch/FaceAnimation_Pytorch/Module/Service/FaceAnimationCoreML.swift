@@ -12,14 +12,13 @@ import RxSwift
 struct FaceAnimation {
     
     let cmmodelTool = CMModelTool()
+    let tfliteTool = TFLiteTool()
     
     private let bag = DisposeBag()
     
 //  coreml 中的维度顺序 (channels, height, width)
     func test(image: UIImage, driving_motion_kps: [[String: Any]], progress: ((UIImage) -> Void)? = nil, completion: ((URL) -> Void)? = nil) {
         DispatchQueue.global().async {
-            
-//            var images: [UIImage] = []
             TimeUtil.begin("before video")
             
             let audioPath = Bundle.main.path(forResource: "myh-fps15", ofType: "mp3")!
@@ -28,31 +27,17 @@ struct FaceAnimation {
             let path = FilePath.path(subPath: "/test1.mov", shouldClear: true)
             var videoWriter = VideoWriter(path: path, imagesCount: driving_motion_kps.count, size: image.size, duration: duration, fps: 15)
             
-            cmmodelTool.kpDetect(image: image)
-                .flatMap({ cmmodelTool.processor(image: image, driving_motion_kps: driving_motion_kps, detectResult: $0) })
-//                .flatMap({ $0.rx_image })
+            tfliteTool.detectFace(image: image)
+                .flatMap { cmmodelTool.kpDetect(image: $0) }
+                .flatMap({ cmmodelTool.processor(image: $0.image, driving_motion_kps: driving_motion_kps, detectResult: $0.result) })
                 .subscribe(onNext: { output in
                     
-//                    images.append(output)
-//
-//                    let brgImage = OpenCVWrapper.bgrImage(output)
-//
-//                    DispatchQueue.main.async {
-//                        progress?(brgImage)
-//                    }
-                    
-                    videoWriter.append(data: output)
+                    let pixel = OpenCVWrapper.shared().fusionPrediction(output, mask: tfliteTool.fusion_mask, sourceImage: image)
+                    videoWriter.append(data: pixel.takeRetainedValue())
                     
                 }, onCompleted: {
                     
                     TimeUtil.end("before video", log: "before video")
-                    
-//                    makeMovie(with: images, size: image.size, fps: 15) { url in
-//                        TimeUtil.end("move", log: "move")
-//                        DispatchQueue.main.async {
-//                            completion?(url)
-//                        }
-//                    }
                     
                     videoWriter.finish { url in
                         
@@ -69,10 +54,6 @@ struct FaceAnimation {
                 .disposed(by: bag)
         }
     }
-    
-    
-    
-
 }
 
 extension UIImage {

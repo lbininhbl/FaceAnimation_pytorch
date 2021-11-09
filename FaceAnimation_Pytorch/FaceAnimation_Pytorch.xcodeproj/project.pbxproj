@@ -40,6 +40,9 @@
 		8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */; };
 		8454ACCB26F322EE00DC0C74 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */; };
 		8454ACD026F32BA600DC0C74 /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */; };
+		8457DD33273A5DB700B9A37D /* AlbumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457DD32273A5DB700B9A37D /* AlbumUtils.swift */; };
+		8457DD34273A5DB700B9A37D /* AlbumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457DD32273A5DB700B9A37D /* AlbumUtils.swift */; };
+		8457DD35273A5DB700B9A37D /* AlbumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457DD32273A5DB700B9A37D /* AlbumUtils.swift */; };
 		846BB58A26FC60A00040DEFA /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58926FC60A00040DEFA /* BaseCoordinator.swift */; };
 		846BB58C26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
 		846BB58D26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */; };
@@ -87,6 +90,24 @@
 		846BB681270461B00040DEFA /* generator.ptl in Resources */ = {isa = PBXBuildFile; fileRef = 84E49E5826FADB2200CCBA8E /* generator.ptl */; };
 		846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */; };
 		846BB692270465420040DEFA /* CMModelTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB691270465420040DEFA /* CMModelTool.swift */; };
+		84A590AA2738C458005C52A0 /* face_detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84A590A82738C458005C52A0 /* face_detect.tflite */; };
+		84A590AB2738C458005C52A0 /* facial_keypoints.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84A590A92738C458005C52A0 /* facial_keypoints.tflite */; };
+		84A590B02738C6E6005C52A0 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590AD2738C6E6005C52A0 /* FaceDetector.swift */; };
+		84A590B12738C6E6005C52A0 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590AE2738C6E6005C52A0 /* ModelDataHandler.swift */; };
+		84A590B22738C6E6005C52A0 /* FaceKeyPointDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590AF2738C6E6005C52A0 /* FaceKeyPointDetector.swift */; };
+		84A590B42738C9F0005C52A0 /* TFLiteTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590B32738C9F0005C52A0 /* TFLiteTool.swift */; };
+		84A590B62738CB83005C52A0 /* male_std-landmarks.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A590B52738CB83005C52A0 /* male_std-landmarks.json */; };
+		84A590B72738CB83005C52A0 /* male_std-landmarks.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A590B52738CB83005C52A0 /* male_std-landmarks.json */; };
+		84A590B82738CB83005C52A0 /* male_std-landmarks.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A590B52738CB83005C52A0 /* male_std-landmarks.json */; };
+		84A590BA2738CDA1005C52A0 /* FaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590B92738CDA1005C52A0 /* FaceUtils.swift */; };
+		84A590BB2738CDA1005C52A0 /* FaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590B92738CDA1005C52A0 /* FaceUtils.swift */; };
+		84A590BC2738CDA1005C52A0 /* FaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A590B92738CDA1005C52A0 /* FaceUtils.swift */; };
+		84A590BE27390292005C52A0 /* fusion_mask.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A590BD27390292005C52A0 /* fusion_mask.json */; };
+		84A590BF27390292005C52A0 /* fusion_mask.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A590BD27390292005C52A0 /* fusion_mask.json */; };
+		84A590C027390292005C52A0 /* fusion_mask.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A590BD27390292005C52A0 /* fusion_mask.json */; };
+		84A590C227390EEA005C52A0 /* ctf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A590C127390EEA005C52A0 /* ctf.jpg */; };
+		84A590C327390EEA005C52A0 /* ctf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A590C127390EEA005C52A0 /* ctf.jpg */; };
+		84A590C427390EEA005C52A0 /* ctf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A590C127390EEA005C52A0 /* ctf.jpg */; };
 		84BA767D272BA10700D75893 /* CMModelTool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA767C272BA10700D75893 /* CMModelTool+Extension.swift */; };
 		84BA767E272BA11700D75893 /* CMModelTool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA767C272BA10700D75893 /* CMModelTool+Extension.swift */; };
 		84BA767F272BA11700D75893 /* CMModelTool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA767C272BA10700D75893 /* CMModelTool+Extension.swift */; };
@@ -191,6 +212,7 @@
 		8454ACC326F31CFA00DC0C74 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8454ACCA26F322EE00DC0C74 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8454ACCF26F32BA600DC0C74 /* GlobalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		8457DD32273A5DB700B9A37D /* AlbumUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumUtils.swift; sourceTree = "<group>"; };
 		846BB58926FC60A00040DEFA /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		846BB58B26FC6CAD0040DEFA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		846BB58F26FC6DB00040DEFA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -203,6 +225,16 @@
 		846BB687270461B10040DEFA /* FaceAnimation_Pytorch copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FaceAnimation_Pytorch copy2-Info.plist"; path = "/Users/admin/Desktop/workflow/ThirdPart-SourceCode/FaceAnimation_pytorch/FaceAnimation_Pytorch/FaceAnimation_Pytorch copy2-Info.plist"; sourceTree = "<absolute>"; };
 		846BB688270461E00040DEFA /* FaceAnimationCoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAnimationCoreML.swift; sourceTree = "<group>"; };
 		846BB691270465420040DEFA /* CMModelTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMModelTool.swift; sourceTree = "<group>"; };
+		84A590A82738C458005C52A0 /* face_detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_detect.tflite; sourceTree = "<group>"; };
+		84A590A92738C458005C52A0 /* facial_keypoints.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = facial_keypoints.tflite; sourceTree = "<group>"; };
+		84A590AD2738C6E6005C52A0 /* FaceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
+		84A590AE2738C6E6005C52A0 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		84A590AF2738C6E6005C52A0 /* FaceKeyPointDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceKeyPointDetector.swift; sourceTree = "<group>"; };
+		84A590B32738C9F0005C52A0 /* TFLiteTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLiteTool.swift; sourceTree = "<group>"; };
+		84A590B52738CB83005C52A0 /* male_std-landmarks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "male_std-landmarks.json"; sourceTree = "<group>"; };
+		84A590B92738CDA1005C52A0 /* FaceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceUtils.swift; sourceTree = "<group>"; };
+		84A590BD27390292005C52A0 /* fusion_mask.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fusion_mask.json; sourceTree = "<group>"; };
+		84A590C127390EEA005C52A0 /* ctf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ctf.jpg; sourceTree = "<group>"; };
 		84BA767C272BA10700D75893 /* CMModelTool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMModelTool+Extension.swift"; sourceTree = "<group>"; };
 		84BA7680272BC98B00D75893 /* CompositionTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionTool.swift; sourceTree = "<group>"; };
 		84BA7681272BC98B00D75893 /* PlayUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayUtil.swift; sourceTree = "<group>"; };
@@ -332,6 +364,7 @@
 				8454ACA326F2F34D00DC0C74 /* MainView */,
 				8454ACA726F2F50C00DC0C74 /* Torch */,
 				84EA2758272A938E0085F120 /* OpenCV */,
+				84A590AC2738C6BA005C52A0 /* TFLite */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -349,6 +382,7 @@
 		8454ACA526F2F39400DC0C74 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				84A590A72738C450005C52A0 /* tflite_model */,
 				846BB68A270462190040DEFA /* coreml_model */,
 				8454ACA626F2F3F900DC0C74 /* pytorch_model */,
 				8454AC9326F2F26400DC0C74 /* Main.storyboard */,
@@ -383,7 +417,9 @@
 			children = (
 				8431D6272729433600CA9187 /* myh_fps_down-bd-fps15.json */,
 				8454ACAD26F2F90100DC0C74 /* myh-389-fps15.json */,
+				84A590B52738CB83005C52A0 /* male_std-landmarks.json */,
 				84BA768C272BCBBB00D75893 /* myh-fps15.mp3 */,
+				84A590BD27390292005C52A0 /* fusion_mask.json */,
 			);
 			path = support_materials;
 			sourceTree = "<group>";
@@ -396,6 +432,7 @@
 				84EA2761272A9A0E0085F120 /* laotou.png */,
 				84EA2763272A9A0E0085F120 /* leijun.png */,
 				8454ACAF26F2F90200DC0C74 /* male_std.jpg */,
+				84A590C127390EEA005C52A0 /* ctf.jpg */,
 			);
 			path = test_images;
 			sourceTree = "<group>";
@@ -502,6 +539,25 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		84A590A72738C450005C52A0 /* tflite_model */ = {
+			isa = PBXGroup;
+			children = (
+				84A590A82738C458005C52A0 /* face_detect.tflite */,
+				84A590A92738C458005C52A0 /* facial_keypoints.tflite */,
+			);
+			path = tflite_model;
+			sourceTree = "<group>";
+		};
+		84A590AC2738C6BA005C52A0 /* TFLite */ = {
+			isa = PBXGroup;
+			children = (
+				84A590AE2738C6E6005C52A0 /* ModelDataHandler.swift */,
+				84A590AD2738C6E6005C52A0 /* FaceDetector.swift */,
+				84A590AF2738C6E6005C52A0 /* FaceKeyPointDetector.swift */,
+			);
+			path = TFLite;
+			sourceTree = "<group>";
+		};
 		84E49E4E26F3407100CCBA8E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,10 +565,13 @@
 				84E49E5A26FB03D200CCBA8E /* TimeUtils.swift */,
 				846BB691270465420040DEFA /* CMModelTool.swift */,
 				84BA767C272BA10700D75893 /* CMModelTool+Extension.swift */,
+				84A590B92738CDA1005C52A0 /* FaceUtils.swift */,
+				84A590B32738C9F0005C52A0 /* TFLiteTool.swift */,
 				84BA7680272BC98B00D75893 /* CompositionTool.swift */,
 				84D94C352730DC9C00ED9906 /* VideoWriter.swift */,
 				84BA7682272BC98B00D75893 /* Path.swift */,
 				84BA7681272BC98B00D75893 /* PlayUtil.swift */,
+				8457DD32273A5DB700B9A37D /* AlbumUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -660,13 +719,16 @@
 			files = (
 				8454AC9A26F2F26600DC0C74 /* LaunchScreen.storyboard in Resources */,
 				846BB5AB27006BA70040DEFA /* CPU-generator-SSLW1.ptl in Resources */,
+				84A590BE27390292005C52A0 /* fusion_mask.json in Resources */,
 				8454ACB326F2F90200DC0C74 /* myh-389-fps15.json in Resources */,
 				846BB59A26FC88450040DEFA /* kkk-generator.ptl in Resources */,
 				84BA768D272BCBBC00D75893 /* myh-fps15.mp3 in Resources */,
 				84EA276D272A9A0E0085F120 /* leijun.png in Resources */,
+				84A590B62738CB83005C52A0 /* male_std-landmarks.json in Resources */,
 				84E49E8526FB1E2300CCBA8E /* CPU-generator-SLW.ptl in Resources */,
 				8454ACBA26F31ADB00DC0C74 /* kp_detector.ptl in Resources */,
 				84EA276A272A9A0E0085F120 /* 0.jpg in Resources */,
+				84A590C227390EEA005C52A0 /* ctf.jpg in Resources */,
 				8431D6282729433600CA9187 /* myh_fps_down-bd-fps15.json in Resources */,
 				8454ACB426F2F90200DC0C74 /* male_std.jpg in Resources */,
 				8454AC9726F2F26600DC0C74 /* Assets.xcassets in Resources */,
@@ -687,12 +749,17 @@
 				846BB679270461B00040DEFA /* myh-389-fps15.json in Resources */,
 				846BB67A270461B00040DEFA /* kkk-generator.ptl in Resources */,
 				84BA768F272BCBBC00D75893 /* myh-fps15.mp3 in Resources */,
+				84A590AA2738C458005C52A0 /* face_detect.tflite in Resources */,
 				84EA276F272A9A0E0085F120 /* leijun.png in Resources */,
+				84A590AB2738C458005C52A0 /* facial_keypoints.tflite in Resources */,
 				846BB67B270461B00040DEFA /* CPU-generator-SLW.ptl in Resources */,
 				846BB67C270461B00040DEFA /* kp_detector.ptl in Resources */,
+				84A590B82738CB83005C52A0 /* male_std-landmarks.json in Resources */,
 				84EA276C272A9A0E0085F120 /* 0.jpg in Resources */,
 				8431D62A2729433600CA9187 /* myh_fps_down-bd-fps15.json in Resources */,
 				846BB67D270461B00040DEFA /* male_std.jpg in Resources */,
+				84A590C027390292005C52A0 /* fusion_mask.json in Resources */,
+				84A590C427390EEA005C52A0 /* ctf.jpg in Resources */,
 				846BB67E270461B00040DEFA /* Assets.xcassets in Resources */,
 				846BB67F270461B00040DEFA /* Main.storyboard in Resources */,
 				846BB680270461B00040DEFA /* kkk-kp_detector.ptl in Resources */,
@@ -708,13 +775,16 @@
 			files = (
 				84E49E7126FB07E100CCBA8E /* LaunchScreen.storyboard in Resources */,
 				846BB5AC27006BA70040DEFA /* CPU-generator-SSLW1.ptl in Resources */,
+				84A590BF27390292005C52A0 /* fusion_mask.json in Resources */,
 				84E49E7226FB07E100CCBA8E /* myh-389-fps15.json in Resources */,
 				846BB59B26FC88450040DEFA /* kkk-generator.ptl in Resources */,
 				84BA768E272BCBBC00D75893 /* myh-fps15.mp3 in Resources */,
 				84EA276E272A9A0E0085F120 /* leijun.png in Resources */,
+				84A590B72738CB83005C52A0 /* male_std-landmarks.json in Resources */,
 				84E49E8626FB1E2300CCBA8E /* CPU-generator-SLW.ptl in Resources */,
 				84E49E7326FB07E100CCBA8E /* kp_detector.ptl in Resources */,
 				84EA276B272A9A0E0085F120 /* 0.jpg in Resources */,
+				84A590C327390EEA005C52A0 /* ctf.jpg in Resources */,
 				8431D6292729433600CA9187 /* myh_fps_down-bd-fps15.json in Resources */,
 				84E49E7426FB07E100CCBA8E /* male_std.jpg in Resources */,
 				84E49E7526FB07E100CCBA8E /* Assets.xcassets in Resources */,
@@ -857,6 +927,7 @@
 				8454ACCB26F322EE00DC0C74 /* MainTableViewCell.swift in Sources */,
 				8454AC9226F2F26400DC0C74 /* MainViewController.swift in Sources */,
 				8454ACC926F31CFA00DC0C74 /* Array+Extension.swift in Sources */,
+				84A590BA2738CDA1005C52A0 /* FaceUtils.swift in Sources */,
 				84BA767D272BA10700D75893 /* CMModelTool+Extension.swift in Sources */,
 				8454ACC626F31CFA00DC0C74 /* CVPixelBufferExtension.swift in Sources */,
 				84BA7689272BC98C00D75893 /* Path.swift in Sources */,
@@ -871,6 +942,7 @@
 				84E49E5726F48D5C00CCBA8E /* MainViewModel.swift in Sources */,
 				8454ACAB26F2F53B00DC0C74 /* TorchModule.mm in Sources */,
 				8454ACC826F31CFA00DC0C74 /* CGImage+Extension.swift in Sources */,
+				8457DD33273A5DB700B9A37D /* AlbumUtils.swift in Sources */,
 				84E49E5026F3408300CCBA8E /* FileUtils.swift in Sources */,
 				84BA7683272BC98B00D75893 /* CompositionTool.swift in Sources */,
 				846BB59326FC6F6D0040DEFA /* MainCoordinator.swift in Sources */,
@@ -894,23 +966,28 @@
 				8431D6202729283E00CA9187 /* Math.swift in Sources */,
 				846BB660270461B00040DEFA /* MainViewController.swift in Sources */,
 				8431D62E27294BD700CA9187 /* MLMultiArray+Helpers.swift in Sources */,
+				84A590B22738C6E6005C52A0 /* FaceKeyPointDetector.swift in Sources */,
 				84D94C3027300AE800ED9906 /* kpdetector-pd149.mlmodel in Sources */,
 				846BB661270461B00040DEFA /* Array+Extension.swift in Sources */,
 				846BB662270461B00040DEFA /* CVPixelBufferExtension.swift in Sources */,
+				84A590B12738C6E6005C52A0 /* ModelDataHandler.swift in Sources */,
 				84D94C3C2730E9B800ED9906 /* generator-pd149-maybeBGR.mlmodel in Sources */,
 				84BA76A3272F897600D75893 /* FaceAnimationCoreML+Extension.swift in Sources */,
 				846BB663270461B00040DEFA /* UIViewController+Extension.swift in Sources */,
 				846BB689270461E00040DEFA /* FaceAnimationCoreML.swift in Sources */,
 				84D94C342730D93100ED9906 /* generator-pd149.mlmodel in Sources */,
+				84A590B02738C6E6005C52A0 /* FaceDetector.swift in Sources */,
 				846BB664270461B00040DEFA /* GlobalFunc.swift in Sources */,
 				846BB665270461B00040DEFA /* AppCoordinator.swift in Sources */,
 				84EA2773272AA2210085F120 /* CGBitmapInfo+Extension.swift in Sources */,
 				846BB666270461B00040DEFA /* AppDelegate.swift in Sources */,
 				84D94C3227300AF100ED9906 /* kpprocessor.mlmodel in Sources */,
 				846BB667270461B00040DEFA /* TimeUtils.swift in Sources */,
+				84A590BC2738CDA1005C52A0 /* FaceUtils.swift in Sources */,
 				846BB668270461B00040DEFA /* Compareable+Extension.swift in Sources */,
 				846BB669270461B00040DEFA /* MainViewModel.swift in Sources */,
 				8431D61E2729219600CA9187 /* CGImage+RawBytes.swift in Sources */,
+				84A590B42738C9F0005C52A0 /* TFLiteTool.swift in Sources */,
 				846BB66B270461B00040DEFA /* CGImage+Extension.swift in Sources */,
 				846BB66C270461B00040DEFA /* FileUtils.swift in Sources */,
 				846BB66D270461B00040DEFA /* MainCoordinator.swift in Sources */,
@@ -919,6 +996,7 @@
 				846BB66E270461B00040DEFA /* String+Extension.swift in Sources */,
 				846BB692270465420040DEFA /* CMModelTool.swift in Sources */,
 				8431D61C2728FCDB00CA9187 /* MLMultiArray+Image.swift in Sources */,
+				8457DD35273A5DB700B9A37D /* AlbumUtils.swift in Sources */,
 				846BB66F270461B00040DEFA /* SceneDelegate.swift in Sources */,
 				846BB671270461B00040DEFA /* UIImageExtension.swift in Sources */,
 				84BA7688272BC98C00D75893 /* PlayUtil.swift in Sources */,
@@ -936,6 +1014,7 @@
 				846BB58D26FC6CAD0040DEFA /* UIViewController+Extension.swift in Sources */,
 				84E49E5F26FB07E100CCBA8E /* MainTableViewCell.swift in Sources */,
 				84E49E6026FB07E100CCBA8E /* MainViewController.swift in Sources */,
+				84A590BB2738CDA1005C52A0 /* FaceUtils.swift in Sources */,
 				84BA767F272BA11700D75893 /* CMModelTool+Extension.swift in Sources */,
 				84E49E6126FB07E100CCBA8E /* Array+Extension.swift in Sources */,
 				84BA768A272BC98C00D75893 /* Path.swift in Sources */,
@@ -950,6 +1029,7 @@
 				84E49E6626FB07E100CCBA8E /* Compareable+Extension.swift in Sources */,
 				84E49E6726FB07E100CCBA8E /* MainViewModel.swift in Sources */,
 				84E49E6926FB07E100CCBA8E /* CGImage+Extension.swift in Sources */,
+				8457DD34273A5DB700B9A37D /* AlbumUtils.swift in Sources */,
 				84E49E6A26FB07E100CCBA8E /* FileUtils.swift in Sources */,
 				84BA7684272BC98B00D75893 /* CompositionTool.swift in Sources */,
 				846BB59426FC6F6D0040DEFA /* MainCoordinator.swift in Sources */,
