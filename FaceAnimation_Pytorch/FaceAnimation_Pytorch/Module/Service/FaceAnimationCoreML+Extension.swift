@@ -59,15 +59,17 @@ extension FaceAnimation {
             let url = FilePath.fileURL(subPath: "/test1.mov")
         
             TimeUtil.begin("composition audio")
-            CompositionTool.merge(videoURL: url, audioURL: audioUrl) { fileUrl, error in
+            CompositionTool.merge(videoURL: url, audioURL: audioUrl) { result in
                 TimeUtil.end("composition audio", log: "音频合成")
-                DispatchQueue.main.async {
-                    if let fileUrl = fileUrl {
+                switch result {
+                case .success(let fileUrl):
+                    DispatchQueue.main.async {
                         finish(fileUrl)
-                    } else {
-                        
                     }
+                case .failure(_):
+                    break
                 }
+                
             }
         }
     }

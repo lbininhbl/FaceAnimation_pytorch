@@ -65,13 +65,23 @@ class MainViewModel {
             })
             .disposed(by: bag)
         
+//        execute.filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
+//            .subscribe(onNext: { image in
+//                self.faceAnimation.test(image: image, driving_motion_kps: self.driving_motion_kps) { image in
+//                    self.resultImage.onNext(image)
+//                } completion: { url in
+//                    self.video.accept(url)
+//                }
+//            })
+//            .disposed(by: bag)
+        
+        
         execute.filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
-            .subscribe(onNext: { image in
-                self.faceAnimation.test(image: image, driving_motion_kps: self.driving_motion_kps) { image in
-                    self.resultImage.onNext(image)
-                } completion: { url in
-                    self.video.accept(url)
-                }
+            .flatMap { self.faceAnimation.rx.execute(image: $0, driving_motion_kps: self.driving_motion_kps) }
+            .subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background))
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { url in
+                self.video.accept(url)
             })
             .disposed(by: bag)
         
@@ -81,10 +91,20 @@ class MainViewModel {
             })
             .disposed(by: bag)
         
+//        execute.filter { $0 == "保存到相册" }.withLatestFrom(video)
+//            .flatMap { AlbumUtils.save(url: $0) }
+//            .subscribe(onCompleted: {
+//                print("保存成功")
+//            })
+//            .disposed(by: bag)
+        
+        
         execute.filter { $0 == "保存到相册" }.withLatestFrom(video)
-            .flatMap { AlbumUtils.save(url: $0) }
-            .subscribe(onCompleted: {
-                print("保存成功")
+            .subscribe(onNext: { url in
+                let bag = DisposeBag()
+                AlbumUtils.save(url: url).subscribe(onCompleted: {
+                    print("保存成功")
+                }).disposed(by: bag)
             })
             .disposed(by: bag)
     }

@@ -8,7 +8,9 @@
 import UIKit
 import AVFoundation
 
-typealias CompositionBlock = (_ url: URL?, _ error: Error?) -> Void
+//typealias CompositionBlock = (_ url: URL?, _ error: Error?) -> Void
+
+typealias CompositionBlock = (Result<URL, Error>) -> Void
 
 func degreeToRadian(_ degree: CGFloat) -> CGFloat {
     return (.pi * degree / 180.0)
@@ -52,7 +54,7 @@ struct CompositionTool {
         let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)!
         // 5. 获取视频内容轨道
         guard let videoAssetTrack = videoAsset.tracks(withMediaType: .video).first else {
-            completion(nil, NSError(domain: "data nil", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: "视频内容为空"]))
+            completion(Result.failure(NSError(domain: "data nil", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: "视频内容为空"])))
             return
         }
         
@@ -62,7 +64,7 @@ struct CompositionTool {
         let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)!
         // 8. 获取音频内容轨道
         guard let audioAssetTrack = audioAsset.tracks(withMediaType: .audio).first else {
-            completion(nil, NSError(domain: "data nil", code: -2, userInfo: [NSLocalizedFailureReasonErrorKey: "音频内容为空"]))
+            completion(Result.failure(NSError(domain: "data nil", code: -2, userInfo: [NSLocalizedFailureReasonErrorKey: "音频内容为空"])))
             return
         }
         
@@ -71,7 +73,7 @@ struct CompositionTool {
             try videoTrack.insertTimeRange(videoTimeRange, of: videoAssetTrack, at: nextClistarTime)
             try audioTrack.insertTimeRange(videoTimeRange, of: audioAssetTrack, at: nextClistarTime)
         } catch {
-            completion(nil, error)
+            completion(Result.failure(error))
         }
         
         // 10. 创建导出session
@@ -209,7 +211,7 @@ struct CompositionTool {
         let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)!
         // 5. 获取视频内容轨道
         guard let videoAssetTrack = videoAsset.tracks(withMediaType: .video).first else {
-            completion(nil, NSError(domain: "data nil", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: "视频内容为空"]))
+            completion(Result.failure(NSError(domain: "data nil", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: "视频内容为空"])))
             return
         }
         
@@ -222,7 +224,7 @@ struct CompositionTool {
         do {
             try videoTrack.insertTimeRange(cropTimeRange, of: videoAssetTrack, at: .zero)
         } catch {
-            completion(nil, error)
+            completion(Result.failure(error))
         }
         
         // 8. 这里可以处理原音频
@@ -325,7 +327,7 @@ extension CompositionTool {
 extension CompositionTool {
     static func export(with composition: AVMutableComposition, videoComposition: AVVideoComposition? = nil, fileName: String = "output", presetName: String = AVAssetExportPresetHighestQuality, completion: @escaping CompositionBlock) {
         guard let assetExport = AVAssetExportSession(asset: composition, presetName: presetName) else {
-            completion(nil, NSError(domain: "data nil", code: -3, userInfo: [NSLocalizedFailureReasonErrorKey: "导出Session为空"]))
+            completion(Result.failure(NSError(domain: "data nil", code: -3, userInfo: [NSLocalizedFailureReasonErrorKey: "导出Session为空"])))
             return
         }
         
@@ -345,28 +347,27 @@ extension CompositionTool {
             switch assetExport.status {
             case .unknown:
                 debugPrint("未知错误")
-                completion(nil, NSError(domain: "export failed", code: -4, userInfo: [NSLocalizedFailureReasonErrorKey: "发生未知错误"]))
+                completion(Result.failure(NSError(domain: "export failed", code: -4, userInfo: [NSLocalizedFailureReasonErrorKey: "发生未知错误"])))
             case .waiting:
                 debugPrint("正在等待导出")
             case .cancelled:
                 debugPrint("导出取消了")
-                completion(nil, NSError(domain: "export failed", code: -5, userInfo: [NSLocalizedFailureReasonErrorKey: "导出取消"]))
+                completion(Result.failure(NSError(domain: "export failed", code: -5, userInfo: [NSLocalizedFailureReasonErrorKey: "导出取消"])))
             case .exporting:
                 debugPrint("正在导出: \(String(describing: assetExport.progress))")
             case .completed:
                 debugPrint("导出完成")
-                completion(outputFile, nil)
+                completion(Result.success(outputFile))
             case .failed:
                 debugPrint("导出失败", assetExport.error ?? "")
                 if let error = assetExport.error {
-                    completion(nil, NSError(domain: "export failed", code: -6, userInfo: [NSLocalizedFailureReasonErrorKey: error.localizedDescription]))
+                    completion(Result.failure(NSError(domain: "export failed", code: -6, userInfo: [NSLocalizedFailureReasonErrorKey: error.localizedDescription])))
                     return
                 }
-                completion(nil, NSError(domain: "export failed", code: -6, userInfo: [NSLocalizedFailureReasonErrorKey: "导出失败"]))
+                completion(Result.failure(NSError(domain: "export failed", code: -6, userInfo: [NSLocalizedFailureReasonErrorKey: "导出失败"])))
             default: break
             }
         })
-        
         
         check(export: assetExport, on: exportQueue)
     }
