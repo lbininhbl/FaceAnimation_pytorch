@@ -22,6 +22,12 @@
 		8431D62C27294BD700CA9187 /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431D62B27294BD700CA9187 /* MLMultiArray+Helpers.swift */; };
 		8431D62D27294BD700CA9187 /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431D62B27294BD700CA9187 /* MLMultiArray+Helpers.swift */; };
 		8431D62E27294BD700CA9187 /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431D62B27294BD700CA9187 /* MLMultiArray+Helpers.swift */; };
+		844CBF6027465D0100F16596 /* m.png in Resources */ = {isa = PBXBuildFile; fileRef = 844CBF5F27465D0100F16596 /* m.png */; };
+		844CBF6127465D0100F16596 /* m.png in Resources */ = {isa = PBXBuildFile; fileRef = 844CBF5F27465D0100F16596 /* m.png */; };
+		844CBF6227465D0100F16596 /* m.png in Resources */ = {isa = PBXBuildFile; fileRef = 844CBF5F27465D0100F16596 /* m.png */; };
+		844CBF6427465D9C00F16596 /* m.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CBF6327465D9C00F16596 /* m.json */; };
+		844CBF6527465D9C00F16596 /* m.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CBF6327465D9C00F16596 /* m.json */; };
+		844CBF6627465D9C00F16596 /* m.json in Resources */ = {isa = PBXBuildFile; fileRef = 844CBF6327465D9C00F16596 /* m.json */; };
 		8454AC8E26F2F26400DC0C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */; };
 		8454AC9026F2F26400DC0C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */; };
 		8454AC9226F2F26400DC0C74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454AC9126F2F26400DC0C74 /* MainViewController.swift */; };
@@ -190,6 +196,8 @@
 		8431D61F2729283E00CA9187 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		8431D6272729433600CA9187 /* myh_fps_down-bd-fps15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "myh_fps_down-bd-fps15.json"; sourceTree = "<group>"; };
 		8431D62B27294BD700CA9187 /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		844CBF5F27465D0100F16596 /* m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m.png; sourceTree = "<group>"; };
+		844CBF6327465D9C00F16596 /* m.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = m.json; sourceTree = "<group>"; };
 		8454AC8A26F2F26400DC0C74 /* FaceAnimation_Pytorch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnimation_Pytorch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8454AC8D26F2F26400DC0C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8454AC8F26F2F26400DC0C74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -427,6 +435,8 @@
 		8454ACAE26F2F90200DC0C74 /* test_images */ = {
 			isa = PBXGroup;
 			children = (
+				844CBF6327465D9C00F16596 /* m.json */,
+				844CBF5F27465D0100F16596 /* m.png */,
 				84EA2762272A9A0E0085F120 /* 0.jpg */,
 				84EA2760272A9A0E0085F120 /* 3935.png */,
 				84EA2761272A9A0E0085F120 /* laotou.png */,
@@ -735,8 +745,10 @@
 				8454AC9526F2F26400DC0C74 /* Main.storyboard in Resources */,
 				846BB59726FC883D0040DEFA /* kkk-kp_detector.ptl in Resources */,
 				84E49E5926FADB2200CCBA8E /* generator.ptl in Resources */,
+				844CBF6027465D0100F16596 /* m.png in Resources */,
 				84EA2764272A9A0E0085F120 /* 3935.png in Resources */,
 				84EA2767272A9A0E0085F120 /* laotou.png in Resources */,
+				844CBF6427465D9C00F16596 /* m.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +759,7 @@
 				846BB677270461B00040DEFA /* LaunchScreen.storyboard in Resources */,
 				846BB678270461B00040DEFA /* CPU-generator-SSLW1.ptl in Resources */,
 				846BB679270461B00040DEFA /* myh-389-fps15.json in Resources */,
+				844CBF6227465D0100F16596 /* m.png in Resources */,
 				846BB67A270461B00040DEFA /* kkk-generator.ptl in Resources */,
 				84BA768F272BCBBC00D75893 /* myh-fps15.mp3 in Resources */,
 				84A590AA2738C458005C52A0 /* face_detect.tflite in Resources */,
@@ -762,6 +775,7 @@
 				84A590C427390EEA005C52A0 /* ctf.jpg in Resources */,
 				846BB67E270461B00040DEFA /* Assets.xcassets in Resources */,
 				846BB67F270461B00040DEFA /* Main.storyboard in Resources */,
+				844CBF6627465D9C00F16596 /* m.json in Resources */,
 				846BB680270461B00040DEFA /* kkk-kp_detector.ptl in Resources */,
 				846BB681270461B00040DEFA /* generator.ptl in Resources */,
 				84EA2766272A9A0E0085F120 /* 3935.png in Resources */,
@@ -791,8 +805,10 @@
 				84E49E7626FB07E100CCBA8E /* Main.storyboard in Resources */,
 				846BB59826FC883D0040DEFA /* kkk-kp_detector.ptl in Resources */,
 				84E49E7726FB07E100CCBA8E /* generator.ptl in Resources */,
+				844CBF6127465D0100F16596 /* m.png in Resources */,
 				84EA2765272A9A0E0085F120 /* 3935.png in Resources */,
 				84EA2768272A9A0E0085F120 /* laotou.png in Resources */,
+				844CBF6527465D9C00F16596 /* m.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

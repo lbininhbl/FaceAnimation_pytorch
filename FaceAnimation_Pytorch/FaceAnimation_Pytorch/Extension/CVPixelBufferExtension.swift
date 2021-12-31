@@ -138,7 +138,26 @@ extension CVPixelBuffer {
             }
         }
         CVPixelBufferUnlockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
+    }
+    
+    func loop() {
+        let width = CVPixelBufferGetWidth(self)
+        let height = CVPixelBufferGetHeight(self)
         
+        print("w:\(width) h:\(height)")
+        
+        CVPixelBufferLockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
+        let floatBuffer = unsafeBitCast(CVPixelBufferGetBaseAddress(self), to: UnsafeMutablePointer<Float>.self)
+    
+        for y in 0..<height {
+            for x in 0..<width {
+                let pixel = (floatBuffer[y * width + x])
+//                    .clamp(to: 0...255.0)
+//                print(Int(pixel))
+                print(pixel)
+            }
+        }
+        CVPixelBufferUnlockBaseAddress(self, CVPixelBufferLockFlags(rawValue: 0))
     }
 }
 

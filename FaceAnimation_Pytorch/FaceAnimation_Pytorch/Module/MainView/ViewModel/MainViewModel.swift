@@ -43,7 +43,7 @@ class MainViewModel {
         image = BehaviorSubject<UIImage>(value: testImage)
         
         // 初始化列表
-        self.list = Observable<[String]>.just(["开始执行-RxSwift", "重播", "保存到相册"])
+        self.list = Observable<[String]>.just(["开始执行-RxSwift", "重播", "保存到相册", "测试"])
         
         self.execute = PublishSubject<String>()
         
@@ -65,17 +65,6 @@ class MainViewModel {
             })
             .disposed(by: bag)
         
-//        execute.filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
-//            .subscribe(onNext: { image in
-//                self.faceAnimation.test(image: image, driving_motion_kps: self.driving_motion_kps) { image in
-//                    self.resultImage.onNext(image)
-//                } completion: { url in
-//                    self.video.accept(url)
-//                }
-//            })
-//            .disposed(by: bag)
-        
-        
         execute.filter { $0 == "开始执行-RxSwift" }.withLatestFrom(image)
             .flatMap { self.faceAnimation.rx.execute(image: $0, driving_motion_kps: self.driving_motion_kps) }
             .subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background))
@@ -91,14 +80,6 @@ class MainViewModel {
             })
             .disposed(by: bag)
         
-//        execute.filter { $0 == "保存到相册" }.withLatestFrom(video)
-//            .flatMap { AlbumUtils.save(url: $0) }
-//            .subscribe(onCompleted: {
-//                print("保存成功")
-//            })
-//            .disposed(by: bag)
-        
-        
         execute.filter { $0 == "保存到相册" }.withLatestFrom(video)
             .subscribe(onNext: { url in
                 let bag = DisposeBag()
@@ -107,5 +88,16 @@ class MainViewModel {
                 }).disposed(by: bag)
             })
             .disposed(by: bag)
+        
+        execute.filter { $0 == "测试" }
+        .subscribe(onNext: { _ in
+//            let imagePath = Bundle.main.path(forResource: "m", ofType: "png")!
+//            let testImage = UIImage(contentsOfFile: imagePath)!
+//            testImage.pixelBuffer()?.loop()
+            
+        })
+        .disposed(by: bag)
     }
+    
+    
 }
